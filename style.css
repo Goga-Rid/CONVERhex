@@ -18,7 +18,7 @@ h1{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1600px;
+    max-width: 2600px;
     margin: 0 auto;
     text-align: center;
     padding: 16px;
@@ -33,10 +33,11 @@ h1{
     width: 150px;
 }
 /*текст*/
-p {
+.textline {
   text-align: center;
-  margin-top: 20px;
-  line-height: 2;
+  margin-top: 30px;
+  line-height: 1;
+  font-size: 18px;
 }
 
 
@@ -71,7 +72,7 @@ button{
 }
 
 .all-content{
-  margin-top: 60px;
+  margin-top: 40px;
   justify-content: row;
 }
 
@@ -84,9 +85,11 @@ button{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 2px solid #bdbdbd;
 }
 
-.valute-card-2{
+.valute-card-2 {
+  border: 2px solid #bdbdbd;
   height: 250px;
   width: 400px;
   background-color: #f4f4f4;
@@ -99,9 +102,10 @@ button{
 
 .valute-cards{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 100px;
 }
 
 .card{
@@ -112,7 +116,7 @@ button{
 .form-control{
   border-radius: 24px;
   margin: 10px;
-  border: 0;
+  border: 2px solid #bdbdbd;
 }
 
 .form-select{
@@ -129,4 +133,26 @@ button{
 
 .btn-reverse {
   border: 1px solid black;
+}
+
+.dev{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  padding: 2.5rem 5rem;
+}
+
+.github {
+  width: 40px;
+  height: 40px;
+}
+
+a{
+  color: #000000;
+}
+
+a:hover{
+  color: #246ef5;
+  transition-duration: 0.5s;
 }
