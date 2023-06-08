@@ -32,6 +32,14 @@ h1{
 .logo {
     width: 150px;
 }
+/*текст*/
+p {
+  text-align: center;
+  margin-top: 20px;
+  line-height: 2;
+}
+
+
 
 /*кнопка*/
 button{
