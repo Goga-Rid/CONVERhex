@@ -1,7 +1,21 @@
+/* Пример шрифта для нашего текста */
+.cssFont_1 {
+  font-family: Verdana;
+  font-size: 45px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #000000;
+  font-weight: 500;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  }
+
 body {
     position: relative;
     height: 100vh; 
-    font-family: "Suisse Int'l Mono", Arial, Helvetica, sans-serif;
+    font-family: 'Noto Sans HK', Arial, Helvetica, sans-serif;
     background: 
     url("./images/backgr.jpg") center
     no-repeat;
@@ -34,10 +48,19 @@ h1{
 }
 /*текст*/
 .textline {
+  font-family: Verdana;
   text-align: center;
   margin-top: 30px;
   line-height: 1;
-  font-size: 18px;
+  font-size: 20px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
 }
 
 
