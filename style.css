@@ -76,28 +76,23 @@ button{
   justify-content: row;
 }
 
-.valute-card-1{
-  height: 250px;
-  width: 400px;
-  background-color: #f4f4f4;
-  border-radius: 24px;
+.flags-and-select{
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  border: 2px solid #bdbdbd;
 }
 
-.valute-card-2 {
-  border: 2px solid #bdbdbd;
-  height: 250px;
-  width: 400px;
-  background-color: #f4f4f4;
+.valute-card-all {
+  height: 300px;
+  width: 490px;
+  background-color: white;
   border-radius: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid rgb(218, 218, 218);
 }
 
 .valute-cards{
@@ -113,15 +108,27 @@ button{
   align-items: center;
 }
 
+.flags{
+  width: 40px;
+  height: 40px;
+  margin-left: 15px;
+}
+
 .form-control{
   border-radius: 24px;
   margin: 10px;
-  border: 2px solid #bdbdbd;
+  height: 40px;
+  width: 100%;
+  background-color: #f4f4f4;
 }
 
 .form-select{
+  width: 100%;
+  border: none;
   border-radius: 24px;
+  margin-left: 10px;
   margin: 10px;
+  background-color: #f4f4f4;
 }
 
 .btn{
@@ -132,7 +139,7 @@ button{
 }
 
 .btn-reverse {
-  border: 1px solid black;
+  border: 0px solid black;
 }
 
 .dev{
