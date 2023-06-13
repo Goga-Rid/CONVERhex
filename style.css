@@ -158,11 +158,11 @@ button{
   margin: 5px;
   border: 0;
   border-radius: 24px;
-  background-color: white;
+  background-color: #246ef5;
 }
 
 .btn-reverse {
-  border: 0px solid black;
+  border: 0px solid white;
 }
 
 .dev{
