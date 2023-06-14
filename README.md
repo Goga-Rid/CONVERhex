@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/de45911b463cd6b95b1a/maintainability)](https://codeclimate.com/github/Goga-Rid/CONVERhex/maintainability)
+
 # <a href="https://imgbb.com/"><img src="https://ibb.co/Rbrv9bv" alt="logo"></a> Currency Converter
 ## Welcome 
 This project was created by students of IT College Hexlet. A team of six wonderful people worked on our project.
