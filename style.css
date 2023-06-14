@@ -74,6 +74,7 @@ button{
 
 .mainmenu{
     padding: 8px 20px;
+    font-family: 'JetBrains Mono', sans-serif;
     font-size: 25px;
     line-height: 1.65;
     border-radius: 20px;
@@ -158,24 +159,11 @@ button{
   margin: 5px;
   border: 0;
   border-radius: 24px;
-  background-color: white;
+  background-color: #246ef5;
 }
 
 .btn-reverse {
-  border: 0px solid black;
-}
-
-.dev{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-  padding: 2.5rem 5rem;
-}
-
-.github {
-  width: 40px;
-  height: 40px;
+  border: 0px solid white;
 }
 
 a{
@@ -186,3 +174,42 @@ a:hover{
   color: #246ef5;
   transition-duration: 0.5s;
 }
+
+/*Нижний колонтитул*/
+#footer {
+  display: block;
+  width: 100%;
+}
+.foot_blck {
+  display: block;
+  width: 94%;
+  max-width: 1250px;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-size: 19px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.foot_levo {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+.github {
+display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 4px;
+  vertical-align: middle;
+}
+
+#footer img {
+  vertical-align: bottom;
+}
+.foot_levo img {
+  margin-bottom: 3px;
+  width: 150px;
+}
+
+
