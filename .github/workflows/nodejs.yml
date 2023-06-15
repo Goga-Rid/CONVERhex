@@ -14,7 +14,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - run: make install
+    - run: npm install --save-dev eslint-config-airbnb-base
     - run: make lint
     - name: Test & publish code coverage  
       uses: paambaati/codeclimate-action@v3.0.0
