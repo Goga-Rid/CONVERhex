@@ -1,4 +1,6 @@
-# <a href="https://imgbb.com/"><img src="https://ibb.co/Rbrv9bv" alt="logo"></a> Currency Converter
+[![Maintainability](https://api.codeclimate.com/v1/badges/de45911b463cd6b95b1a/maintainability)](https://codeclimate.com/github/Goga-Rid/CONVERhex/maintainability)
+# <img src="https://im.wampi.ru/2023/06/14/AKTUALNO-PhotoRoom.png-PhotoRoom.png" alt="logo"> Currency Converter
+
 ## Welcome 
 This project was created by students of IT College Hexlet. A team of six wonderful people worked on our project.
 You can see them in the [authors](https://github.com/Goga-Rid/CONVERhex/graphs/contributors) column :)
