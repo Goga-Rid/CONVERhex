@@ -17,7 +17,7 @@ body {
     height: 100vh; 
     font-family: 'Noto Sans HK', Arial, Helvetica, sans-serif;
     background: 
-    url("./images/backgr.jpg") center
+    url("../images/backgr.jpg") center
     no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
