@@ -212,5 +212,15 @@ display: inline-block;
   margin-bottom: 3px;
   width: 150px;
 }
+.calc__title {
+  font-weight: 500;
+    font-size: 1.5em;
+    font-family: Verdana;
+    text-align: center;
+    margin-block-end: 7%;
+    margin-top:-10%;
+    margin-bottom: 7%;
+    color: #000000;
+}
 
 
