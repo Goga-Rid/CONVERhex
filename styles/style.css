@@ -1,3 +1,15 @@
+/* Убирает стрелки в поле ввода чисел */
+input[type="number"] {
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
+}
+ 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	display: none;
+}
+
 /* Пример шрифта для нашего текста */
 .cssFont_1 {
   font-family: Verdana;
