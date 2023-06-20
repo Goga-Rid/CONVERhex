@@ -6,9 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <link href="//db.onlinewebfonts.com/c/008acf881eac29f0c639b8e2345a1764?family=Suisse+Int'l+Mono" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.cdnfonts.com/css/jetbrains-mono-2" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/imed/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/imed/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/imed/favicon-16x16.png">
+  <link rel="manifest" href="images/imed/site.webmanifest">
+  <link rel="mask-icon" href="images/imed/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#ffffff">
   <title>ConverHex</title>
-</head>
+  <script src="/index.js"></script>
+  <script src="/styles/adaptive.js"></script>
+  </head>
 <body>
   <div class="header">
     <div class="block-logo">
@@ -33,53 +42,76 @@
   </div>
   
   <div class="all-content">
-      <div class="valute-cards">
-        <div class="valute-card-1">
-           <div class="input-group mb-3">
-             <input type="text" class="form-control" aria-label="Text input with dropdown button">
-           </div>
+      <div class="valute-cards" id="AJ">
+        <div class="valute-card-all">
 
-           <select class="form-select" aria-label="Default select example">
-             <option selected>Open this select menu</option>
-             <option value="1">One</option>
-             <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-
-        <button class="btn btn-reverse">
-          <svg height="32" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="m0 0h32v32h-32z"/><path d="m12.4748737 16.9644661c.3905243.3905243.3905243 1.0236893 0 1.4142136l-2.56401434 2.5638932 15.44269404.0005729c.5522847 0 1 .4477152 1 1 0 .5522847-.4477153 1-1 1l-15.42869404-.0005729 2.55001434 2.5503203c.3905243.3905243.3905243 1.0236893 0 1.4142136s-1.0236892.3905243-1.4142135 0l-4.24264072-4.2426407c-.18024198-.180242-.27729535-.4121707-.29116012-.6480754v-.1612085c.01386477-.2359047.11091814-.4678334.29116012-.6480754l4.24264072-4.2426407c.3905243-.3905243 1.0236892-.3905243 1.4142135 0zm9.0535534-11.87157288 4.2426407 4.24264069c.180242.18024198.2772954.41217073.2911601.64807539v.1612085c-.0138647.2359047-.1109181.4678334-.2911601.6480754l-4.2426407 4.2426407c-.3905243.3905243-1.0236892.3905243-1.4142135 0s-.3905243-1.0236893 0-1.4142136l2.5640143-2.5638932-15.4182279-.0005729c-.55228475 0-1-.4477152-1-1 0-.5522847.44771525-.99999995 1-.99999995l15.4042279.00057287-2.5500143-2.55032034c-.3905243-.39052429-.3905243-1.02368927 0-1.41421356s1.0236892-.39052429 1.4142135 0z" fill="#000"/></g></svg>
-        </button>
-
-        <div class="valute-card-2">
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="Text input with dropdown button">
           </div>
 
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
+          <div class="flags-and-select">
+            <!-- добавить скрипт js для изменения иконки флагов -->
+            <img class="flags" src="./images/flags/russia.png" alt="flags-country">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              <option style="background-image: url(/images/flags/russia.png);" class="icon" value="01">Российский рубль</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+             <option value="3">Three</option>
+           </select>
+          </div>
         </div>
 
+        <button class="btn btn-reverse">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="Converter_button__dd8bX SwapButton_button__vl_3z"><circle cx="16" cy="16" r="16" fill="#246ef5"></circle><path d="M20.1025 14.793L22.9995 11.897L20.1025 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 11.9H23" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11.897 17.207L9 20.103L11.897 23" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M23 20.1H9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </button>
+
+        <div class="valute-card-all">
+
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+          </div>
+
+          <div class="flags-and-select">
+            <!-- добавить скрипт js для изменения иконки флагов -->
+            <img class="flags" src="./images/flags/russia.png" alt="flags-country">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              <option style="background-image: url(/images/flags/russia.png);" class="icon" value="01">Российский рубль</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+             <option value="3">Three</option>
+           </select>
+          </div>
+        </div>
       </div>
   </div>
 
 </div>
 
-<!-- контакты ссылки на разработчиков -->
-<div class="dev">
-  <div class="github" href="https://github.com/Goga-Rid/CONVERhex">
-    <a href="https://github.com/Goga-Rid/CONVERhex">
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor">
-        <g class="astro-PATNJMLL"><g stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke-width="14.7" d="M55.7 167.2c13.9 1 21.3 13.1 22.2 14.6 4.2 7.2 10.4 9.6 18.3 7.1l1.1-3.4a60.3 60.3 0 0 1-25.8-11.9c-12-10.1-18-25.6-18-46.3"></path><path fill="none" stroke-width="16" d="M61.4 205.1a24.5 24.5 0 0 1-3-6.1c-3.2-7.9-7.1-10.6-7.8-11.1l-1-.6c-2.4-1.6-9.5-6.5-7.2-13.9 1.4-4.5 6-7.2 12.3-7.2h.8c4 .3 7.6 1.5 10.7 3.2-9.1-10.1-13.6-24.3-13.6-42.3 0-11.3 3.5-21.7 10.1-30.4A46.7 46.7 0 0 1 65 67.3a8.3 8.3 0 0 1 5-4.7c2.8-.9 13.3-2.7 33.2 9.9a105 105 0 0 1 50.5 0c19.9-12.6 30.4-10.8 33.2-9.9 2.3.7 4.1 2.4 5 4.7 5 12.7 4 23.2 2.6 29.4 6.7 8.7 10 18.9 10 30.4 0 42.6-25.8 54.7-43.6 58.7 1.4 4.1 2.2 8.8 2.2 13.7l-.1 23.4v2.3"></path><path fill="none" stroke-width="16" d="M160.9 185.7c1.4 4.1 2.2 8.8 2.2 13.7l-.1 23.4v2.3A98.6 98.6 0 1 0 61.4 205c-1.4-2.1-11.3-17.5-11.8-17.8-2.4-1.6-9.5-6.5-7.2-13.9 1.4-4.5 6-7.2 12.3-7.2h.8c4 .3 7.6 1.5 10.7 3.2-9.1-10.1-13.6-24.3-13.6-42.3 0-11.3 3.5-21.7 10.1-30.4A46.4 46.4 0 0 1 65 67.3a8.3 8.3 0 0 1 5-4.7c2.8-.9 13.3-2.7 33.2 9.9a105 105 0 0 1 50.5 0c19.9-12.6 30.4-10.8 33.2-9.9 2.3.7 4.1 2.4 5 4.7 5 12.7 4 23.2 2.6 29.4 6.7 8.7 10 18.9 10 30.4.1 42.6-25.8 54.7-43.6 58.6z"></path><path fill="none" stroke-width="18.7" d="m170.1 203.3 17.3-12 17.2-18.7 9.5-26.6v-27.9l-9.5-27.5"></path><path fill="none" stroke-width="22.7" d="m92.1 57.3 23.3-4.6 18.7-1.4 29.3 5.4m-110 32.6-8 16-4 21.4.6 20.3 3.4 13"></path><path fill="none" stroke-width="13.3" d="M28.8 133a100 100 0 0 0 66.9 94.4v-8.7c-22.4 1.8-33-11.5-35.6-19.8-3.4-8.6-7.8-11.4-8.5-11.8"></path></g></g>
-      </svg>
-    </a>
-  </div>
-</div>
 
-<script src="./index.js"></script>
+<!--Нижний колонтитул-->
+<footer id="footer">
+  <div class="foot_blck">
+    <div class="foot_levo">
+      <a href="сылка на наш сайт">
+        <img src="./images/logo.png" alt="ConverHex">
+      </a>
+    <br>
+    "© 2023 ConverHex.ru"
+    </div>
+      <div class="dev">
+        <div class="github" href="https://github.com/Goga-Rid/CONVERhex">
+          <a href="https://github.com/Goga-Rid/CONVERhex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor">
+              <g class="astro-PATNJMLL"><g stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke-width="14.7" d="M55.7 167.2c13.9 1 21.3 13.1 22.2 14.6 4.2 7.2 10.4 9.6 18.3 7.1l1.1-3.4a60.3 60.3 0 0 1-25.8-11.9c-12-10.1-18-25.6-18-46.3"></path><path fill="none" stroke-width="16" d="M61.4 205.1a24.5 24.5 0 0 1-3-6.1c-3.2-7.9-7.1-10.6-7.8-11.1l-1-.6c-2.4-1.6-9.5-6.5-7.2-13.9 1.4-4.5 6-7.2 12.3-7.2h.8c4 .3 7.6 1.5 10.7 3.2-9.1-10.1-13.6-24.3-13.6-42.3 0-11.3 3.5-21.7 10.1-30.4A46.7 46.7 0 0 1 65 67.3a8.3 8.3 0 0 1 5-4.7c2.8-.9 13.3-2.7 33.2 9.9a105 105 0 0 1 50.5 0c19.9-12.6 30.4-10.8 33.2-9.9 2.3.7 4.1 2.4 5 4.7 5 12.7 4 23.2 2.6 29.4 6.7 8.7 10 18.9 10 30.4 0 42.6-25.8 54.7-43.6 58.7 1.4 4.1 2.2 8.8 2.2 13.7l-.1 23.4v2.3"></path><path fill="none" stroke-width="16" d="M160.9 185.7c1.4 4.1 2.2 8.8 2.2 13.7l-.1 23.4v2.3A98.6 98.6 0 1 0 61.4 205c-1.4-2.1-11.3-17.5-11.8-17.8-2.4-1.6-9.5-6.5-7.2-13.9 1.4-4.5 6-7.2 12.3-7.2h.8c4 .3 7.6 1.5 10.7 3.2-9.1-10.1-13.6-24.3-13.6-42.3 0-11.3 3.5-21.7 10.1-30.4A46.4 46.4 0 0 1 65 67.3a8.3 8.3 0 0 1 5-4.7c2.8-.9 13.3-2.7 33.2 9.9a105 105 0 0 1 50.5 0c19.9-12.6 30.4-10.8 33.2-9.9 2.3.7 4.1 2.4 5 4.7 5 12.7 4 23.2 2.6 29.4 6.7 8.7 10 18.9 10 30.4.1 42.6-25.8 54.7-43.6 58.6z"></path><path fill="none" stroke-width="18.7" d="m170.1 203.3 17.3-12 17.2-18.7 9.5-26.6v-27.9l-9.5-27.5"></path><path fill="none" stroke-width="22.7" d="m92.1 57.3 23.3-4.6 18.7-1.4 29.3 5.4m-110 32.6-8 16-4 21.4.6 20.3 3.4 13"></path><path fill="none" stroke-width="13.3" d="M28.8 133a100 100 0 0 0 66.9 94.4v-8.7c-22.4 1.8-33-11.5-35.6-19.8-3.4-8.6-7.8-11.4-8.5-11.8"></path></g></g>
+            </svg>
+          </a>
+    </div>
+    <br class="clear">
+
+  </div>
+</footer>
+
 </body>
 </html>
