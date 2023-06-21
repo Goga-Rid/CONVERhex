@@ -18,10 +18,26 @@
 </head>
 
 <body>
+<<<<<<< HEAD
+  <div class="header">
+    <div class="block-logo">
+      <img src="./images/logo.png" alt="logo" class="logo">
+      <div class="btn-lang">
+        <button class="change-lang" id="ru-lang" type="button"></button>
+        <button class="change-lang" id="eng-lang" type="button"></button>
+      </div>
+    </div>
+
+    <div>Currency converter</div>
+
+
+    <button class="mainmenu" type="button" onclick="history.back();" value="main">
+=======
 <div class="header">
     <img src="./images/logo.png" alt="logo" class="logo">
     <div class="cssFont_1">Currency converter</div>
     <button class="mainmenu" type="button" onclick="window.location.reload();" value="main">
+>>>>>>> ed988893481c86b2258fd4d3d8b3eff5e4809150
       Main 
     </button>
 </div>
@@ -41,7 +57,6 @@
 
           <div class="flags-and-select">
             <!-- добавить скрипт js для изменения иконки флагов -->
-            <img class="flags" src="./images/flags/russia.png" alt="flags-country">
             <select class="form-select" aria-label="Default select example">
               <option selected style="background-image: url(/images/flags/russia.png);" class="icon" value="RUB">Russian Ruble</option>
               <option style="background-image: url(/images/flags/united-states.png);" class="icon" value="USD">US Dollar</option>
@@ -56,7 +71,6 @@
 
         <div class="valute-card-all">
           <div class="calc__title">I want to get</div>
-
 
           <div class="input-group mb-3">
             <input type="number" min="0" class="form-control" id="base_currency" aria-label="Text input with dropdown button" oninput="validity.valid||(value='');">

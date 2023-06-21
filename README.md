@@ -1,3 +1,4 @@
+[![NODECI](https://github.com/Goga-Rid/CONVERhex/actions/workflows/nodejs.yml/badge.svg)](https://github.com/Goga-Rid/CONVERhex/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/de45911b463cd6b95b1a/maintainability)](https://codeclimate.com/github/Goga-Rid/CONVERhex/maintainability)
 # <img src="https://im.wampi.ru/2023/06/14/AKTUALNO-PhotoRoom.png-PhotoRoom.png" alt="logo"> Currency Converter
 
