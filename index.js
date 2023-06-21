@@ -1,3 +1,5 @@
+import CurrencyAPI from '@everapi/currencyapi-js';
+// const valueInputNode = document.querySelector('.input-group mb-3');
 const currencies = document.querySelector('#currencies');
 console.log(currencies);
 
@@ -10,3 +12,16 @@ console.log(queryURL);
 currencies.addEventListener('input', () => {
   console.log(queryURL);
 });
+
+const currencyApi = new CurrencyAPI(APIKey);
+
+const generationQuer = () => {
+  currencyApi.latest({
+    base_currency: 'USD',
+    currencies: 'EUR',
+  }).then((response) => {
+    console.log(response);
+  });
+};
+
+generationQuer();
