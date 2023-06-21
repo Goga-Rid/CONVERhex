@@ -1,4 +1,3 @@
-// const valueInputNode = document.querySelector('.input-group mb-3');
 const currencies = document.querySelector('#currencies');
 console.log(currencies);
 
