@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "i18next": "^23.1.0",
+    "jquery": "^3.7.0",
     "lodash": "^4.17.21"
   }
 }
