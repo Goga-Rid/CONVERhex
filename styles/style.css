@@ -1,3 +1,15 @@
+/* Убирает стрелки в поле ввода чисел */
+input[type="number"] {
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
+}
+ 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	display: none;
+}
+
 /* Пример шрифта для нашего текста */
 .cssFont_1 {
   font-family: Verdana;
@@ -17,7 +29,7 @@ body {
     height: 100vh; 
     font-family: 'Noto Sans HK', Arial, Helvetica, sans-serif;
     background: 
-    url("./images/backgr.jpg") center
+    url("../images/backgr.jpg") center
     no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -148,7 +160,6 @@ button{
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  flex-wrap: wrap;
   margin-top: 100px;
 }
 
@@ -235,6 +246,16 @@ display: inline-block;
 .foot_levo img {
   margin-bottom: 3px;
   width: 150px;
+}
+.calc__title {
+  font-weight: 500;
+    font-size: 1.5em;
+    font-family: Verdana;
+    text-align: center;
+    margin-block-end: 7%;
+    margin-top:-10%;
+    margin-bottom: 7%;
+    color: #000000;
 }
 
 

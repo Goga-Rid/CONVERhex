@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/Sp4nch/frontend-project-44/workflows/NodeCi/badge.svg)](https://github.com/Sp4nch/frontend-project-44/actions)
+[![Actions Status](https://github.com/Goga-Rid/CONVERhex/tree/main/workflows/NodeCi/badge.svg)](https://github.com/Sp4nch/frontend-project-44/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/de45911b463cd6b95b1a/maintainability)](https://codeclimate.com/github/Goga-Rid/CONVERhex/maintainability)
 # <img src="https://im.wampi.ru/2023/06/14/AKTUALNO-PhotoRoom.png-PhotoRoom.png" alt="logo"> Currency Converter
 
