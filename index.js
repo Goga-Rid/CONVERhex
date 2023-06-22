@@ -5,12 +5,11 @@ const APIKey = 'A029StvJl0JE8mEktoDdadbzgg70ipzxccdHrJPb';
 const currencyApi = new CurrencyAPI(APIKey);
 
 const generationQuer = () => {
-  currencyApi.latest({
+  const promise = currencyApi.latest({
     base_currency: 'RUB',
     currencies: 'EUR,USD',
-  }).then((response) => {
-    console.log(response);
-  });
+  }).then((response) => response.data);
+  return promise;
 };
 
-generationQuer();
+export default generationQuer;
