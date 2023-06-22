@@ -1,45 +1,33 @@
-const elementRU1 = document.querySelector('#ru1');
-const elementUSD1 = document.querySelector('#usd1');
-const elementEUR1 = document.querySelector('#eur1');
+const selectLeft = document.getElementById('leftSelect'); // <- обращение к левому select
+const selectRight = document.getElementById('rightSelect'); // <- обращение к правому select
 
-const elementRU2 = document.querySelector('#ru2');
-const elementUSD2 = document.querySelector('#usd2');
-const elementEUR2 = document.querySelector('#eur2');
+const valueSelectLeft = selectLeft.value; // <- берём value выбранной валюты в левом select
+const valueSelectRight = selectRight.value; // <- берём value выбранной валюты в правом select
 
-const leftArrCurrency = [elementRU1, elementUSD1, elementEUR1];
+const emptyValueLeft = valueSelectLeft; // <- пустышка, принимающая значение value левой валюты
+const emptyValueRight = valueSelectRight; // <- пустышка, принимающая значение value правой валюты
 
-const rightArrCurrency = [elementRU2, elementUSD2, elementEUR2];
+const clickEvent = document.querySelector('#reversButton'); // <- Обращение к кнопке
+const clickCount = 0; // <- счётчик для click ивента
 
-const selectLeft = document.getElementById('leftSelect');
-const selectRight = document.getElementById('rightSelect');
+clickEvent.on('click', (clickCount) => {
+  clickCount += 1;
+  return clickCount;
+}); // <- Реализация click ивента
 
-const valueSelectLeft = selectLeft.options[select.selectedIndex].value;
-const valueSelectRight = selectRight.options[select.selectedIndex].value; 
+const reversValue = (clickCount, valueSelectLeft, valueSelectRight, emptyValueLeft, emptyValueRight) => {
+  if (clickCount % 2 === 0) {
+    valueSelectLeft = emptyValueRight;
+    valueSelectRight = emptyValueLeft;
+    return (valueSelectLeft, valueSelectRight);
+  }
+  valueSelectLeft = emptyValueLeft;
+  valueSelectRight = emptyValueRight;
+  return (valueSelectLeft, valueSelectRight);
+};
 
-let clickIvent = document.querySelector('#reversButton');
-let ckickCount = 0;
-
-clickIvent.addEventListener('click', function() {
-    ckickCount += 1;
-    return ckickCount;
-});
-
-const reversButton = (clickIvent, valueSelectLeft, valueSelectRight, leftArrCurrency, rightArrCurrency) => {
-    let positionOptionLeft = 0;
-    let positionOptionRigt = 0;
-    for ( let i = 0; i < leftArrCurrency.length - 1; i++) {
-        if (valueSelectLeft === leftArrCurrency[i]){
-            positionOptionLeft = leftArrCurrency.length - 3 + i;
-            return (positionOptionLeft)
-        } else continue;
-    };
-
-    for ( let i = 0; i < rightArrCurrency.length - 1; i++) {
-        if (valueSelectRight === rightArrCurrency[i]){
-            positionOptionRigt = rightArrCurrency.length - 3 + i;
-            return (positionOptionRigt)
-        } else continue;
-    };
-
-    
-}
+const reversButton = (valueSelectLeft, valueSelectRight, selectLeft, selectRight) => {
+  selectLeft.value = valueSelectLeft;
+  selectRight.value = valueSelectRight;
+  return (selectLeft, selectRight);
+};
