@@ -41,10 +41,10 @@
 
           <div class="flags-and-select">
             <!-- добавить скрипт js для изменения иконки флагов -->
-            <select class="form-select" aria-label="Default select example">
-              <option selected style="background-image: url(/images/flags/russia.png);" class="icon" value="RUB">Russian Ruble</option>
-              <option style="background-image: url(/images/flags/united-states.png);" class="icon" value="USD">US Dollar</option>
-             <option style="background-image: url(/images/flags/european-union.png);" class="icon" value="EUR">Euro</option>
+            <select class="form-select" aria-label="Default select example" id="leftSelect">
+              <option selected style="background-image: url(/images/flags/russia.png);" class="icon" value="RUB" id="ru1">Russian Ruble</option>
+              <option style="background-image: url(/images/flags/united-states.png);" class="icon" value="USD" id="usd1">US Dollar</option>
+             <option style="background-image: url(/images/flags/european-union.png);" class="icon" value="EUR" id="eur1">Euro</option>
            </select>
           </div>
         </div>
@@ -96,5 +96,7 @@
 </footer>
 <script type="module" src="/index.js"></script>
 <script src="/styles/adaptive.js"></script>
+<script type="module" src="/src/converter.js"></script>
+<script src="/src/devbuttons.js"></script>
 </body>
 </html>
