@@ -1,4 +1,4 @@
-import CurrencyAPI from './node_modules/@everapi/currencyapi-js/index.js';
+import CurrencyAPI from '@everapi/currencyapi-js/index.js';
 
 const APIKey = 'A029StvJl0JE8mEktoDdadbzgg70ipzxccdHrJPb';
 
