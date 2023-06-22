@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-const RATES = {
+import generationQuer from "../index.js";
 
-};
-=======
-const RATES = { };
->>>>>>> 437b01d31692c9769d27edc867943c8bdd3605cd
+const rates = generationQuer();
+console.log(rates);
