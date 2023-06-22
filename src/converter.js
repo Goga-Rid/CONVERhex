@@ -1,3 +1,1 @@
-const RATES = {
-
-};
+const RATES = { };

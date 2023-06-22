@@ -6,4 +6,8 @@ extends: airbnb-base
 parserOptions:
   ecmaVersion: latest
   sourceType: module
-rules: {}
+rules: {
+  "import/extensions": 0,
+  "import/no-relative-packages": 0,
+  
+}

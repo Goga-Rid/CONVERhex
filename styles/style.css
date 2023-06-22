@@ -151,7 +151,8 @@ button{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgb(218, 218, 218);
+  border: 1px solid #000000;
+  
 }
 
 #AJ{
