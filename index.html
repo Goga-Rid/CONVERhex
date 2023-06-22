@@ -19,16 +19,9 @@
 
 <body>
   <div class="header">
-    <div class="block-logo">
-      <img src="./images/logo.png" alt="logo" class="logo">
-      <div class="btn-lang">
-      </div>
-    </div>
-
-    <div>Currency converter</div>
-
-
-    <button class="mainmenu" type="button" onclick="history.back();" value="main">
+    <img src="./images/logo.png" alt="logo" class="logo">
+    <div class="cssFont_1">Currency converter</div>
+    <button class="mainmenu" type="button" onclick="window.location.reload();" value="main">
       Main 
     </button>
 </div>
@@ -69,7 +62,6 @@
 
           <div class="flags-and-select">
             <!-- добавить скрипт js для изменения иконки флагов -->
-            <img class="flags" src="./images/flags/russia.png" alt="flags-country">
             <select class="form-select" aria-label="Default select example">
               <option selected style="background-image: url(/images/flags/united-states.png);" class="icon" value="USD">US Dollar</option>
               <option style="background-image: url(/images/flags/russia.png);" class="icon" value="RUB">Russian Ruble</option>
