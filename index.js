@@ -1,12 +1,16 @@
-const currencies = document.querySelector('#currencies');
-console.log(currencies);
+import CurrencyAPI from './node_modules/@everapi/currencyapi-js/index.js';
 
-const baseCurr = document.querySelector('#base_currency');
 const APIKey = 'A029StvJl0JE8mEktoDdadbzgg70ipzxccdHrJPb';
 
-const queryURL = `"https://api.currencyapi.com/v3/latest?apikey=${APIKey}&currencies=${currencies}&base_currency=${baseCurr}"`;
+const currencyApi = new CurrencyAPI(APIKey);
 
-console.log(queryURL);
-currencies.addEventListener('input', () => {
-  console.log(queryURL);
-});
+const generationQuer = () => {
+  currencyApi.latest({
+    base_currency: 'RUB',
+    currencies: 'EUR,USD',
+  }).then((response) => {
+    console.log(response);
+  });
+};
+
+generationQuer();
