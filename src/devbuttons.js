@@ -13,9 +13,16 @@ function changeOptionAndImage() {
   // Меняем значение выбранного элемента в правом селекторе
   rightSelect.value = leftValue;
 
-
   // Меняем картинку, связанную с выбранным значением в левом селекторе
   flagImage1.src = './images/flags/' + rightValue + '.png';
   // Меняем картинку, связанную с выбранным значением в правом селекторе
   flagImage2.src = './images/flags/' + leftValue + '.png';
+
+  const input = document.querySelector('#inputV');
+  const result = document.querySelector('#resultV');
+
+  const tempInput = input.value;
+  const tempResult = result.value;
+  input.value = tempResult;
+  result.value = tempInput;
 }
