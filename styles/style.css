@@ -12,7 +12,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* Пример шрифта для нашего текста */
 .cssFont_1 {
-  font-family: Verdana;
+  font-family: 'JetBrains Mono';
   font-size: 45px;
   letter-spacing: 0px;
   word-spacing: 0px;
@@ -25,12 +25,13 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
 body {
+  display: flex;
+  flex-direction:column;
     position: relative;
     height: 100vh; 
     font-family: 'Noto Sans HK', Arial, Helvetica, sans-serif;
     background: 
-    url("../images/backgr.jpg") center
-    no-repeat;
+    url("../images/backgr.jpg");
     -webkit-background-size: cover;
     background-size: cover;
 }
@@ -59,19 +60,13 @@ h1{
 }
 /*текст*/
 .textline {
-  font-family: Verdana;
-  text-align: center;
+  font-family: 'JetBrains Mono';
   margin-top: 30px;
   line-height: 1;
-  font-size: 20px;
-  letter-spacing: 0px;
-  word-spacing: 0px;
-  color: #000000;
-  font-weight: 400;
-  text-decoration: none;
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
+  font-size: 25px;
+  color: #ffffffff;
+  font-weight: 500;
+  text-align: center;
 }
 
 
@@ -93,7 +88,7 @@ button{
 
     background: #246ef5;
     transition-duration: 0.6s;
-    border: 1 px solid #000000;
+    border: 1 px solid #ffffffff;
 
 
 }
@@ -130,7 +125,7 @@ button{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000000;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
   
 }
 
@@ -228,29 +223,46 @@ display: inline-block;
   margin-bottom: 3px;
   width: 150px;
 }
-.calc__title {
-  font-weight: 500;
-    font-size: 1.5em;
-    font-family: Verdana;
-    text-align: center;
+.calc_title {
     margin-block-end: 7%;
-    margin-top:-10%;
-    margin-bottom: 7%;
-    color: #000000;
+    margin-top:-19px;
+    margin-bottom: 25px;
+    color: #ffffffff;
+    background-color: #246ef5;
+    border-radius: 20px;
+    transition-duration: 0.6s;
+    width: 490px;
+    height: 130px;
+    border-right: 1px solid #000000;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
+    background-image: url("../images/coin.png");
+    background-size: 200px;
 }
-.btn{
+
+
+.text_card{
+  margin-top: 10%;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: 'JetBrains Mono', serif;
+  text-align: center;
+}
+
+ .btn{
   position: relative;
   display: inline-flex;
   margin: 5px;
   border: 0;
   border-radius: 24px;
-  background-color: black;
-  padding: 10px 30px;
+  background-color: #f4f4f4;
+  padding: 7px 30px;
   letter-spacing: 1px;
   overflow: hidden;
-
-
+  border: 1px #000000 solid;
 }
+
 .btn svg
 {
   position: relative;
@@ -276,3 +288,23 @@ display: inline-block;
   height: 250px;
 }
 
+.btn:hover .strelochka {
+  stroke: white;
+  transition-duration: 0.8s;
+}
+
+
+.description {
+  margin-top: 20px;
+  margin-bottom: -50px;
+  background-color: #246ef5;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 400px; 
+  max-width: 10000px;
+  text-align: center;
+  width:100%;
+  height: 100%;
+}
