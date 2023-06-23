@@ -40,11 +40,11 @@
           </div>
 
           <div class="flags-and-select">
-            <!-- добавить скрипт js для изменения иконки флагов -->
-            <select class="form-select" aria-label="Default select example" id="leftSelect">
-              <option  selected style="background-image: url(/images/flags/russia.png);" class="icon" value="RUB" id="ru1">Russian Ruble</option>
-              <option style="background-image: url(/images/flags/united-states.png);" class="icon" value="USD" id="usd1">US Dollar</option>
-             <option style="background-image: url(/images/flags/european-union.png);" class="icon" value="EUR" id="eur1">Euro</option>
+            <img class="flags" id="flagImage1" src ="./images/flags/russia.png" alt="flags-country">
+            <select class="form-select" id="leftSelect" onchange="changeFlagImage('flagImage1', 'leftSelect')">
+              <option selected class="icon" value="RUB" id="ru1">Russian Ruble</option>
+              <option class="icon" value="USD" id="usd1">US Dollar</option>
+             <option class="icon" value="EUR" id="eur1">Euro</option>
            </select>
           </div>
         </div>
@@ -61,12 +61,12 @@
           </div>
 
           <div class="flags-and-select">
-            <!-- добавить скрипт js для изменения иконки флагов -->
-            <select class="form-select" aria-label="Default select example" id="rightSelect">
-              <option selected style="background-image: url(/images/flags/united-states.png);" class="icon" value="USD">US Dollar</option>
-              <option style="background-image: url(/images/flags/russia.png);" class="icon" value="RUB">Russian Ruble</option>
-             <option style="background-image: url(/images/flags/european-union.png);" class="icon" value="EUR">Euro</option>
-           </select>
+            <img class="flags" src="./images/flags/united-states.png" id="flagImage2" alt="flags-country">
+            <select class="form-select" id="rightSelect" onchange="changeFlagImage('flagImage2', 'rightSelect')">
+            <option selected class="icon" value="USD">US Dollar</option>
+            <option class="icon" value="RUB">Russian Ruble</option>
+            <option class="icon" value="EUR">Euro</option>
+            </select>
           </div>
         </div>
       </div>
@@ -92,10 +92,14 @@
     </div>
     <br class="clear">
 
+
   </div>
 </footer>
 <script type="module" src="/index.js"></script>
 <script src="/styles/adaptive.js"></script>
+<script type="module" src="/src/converter.js"></script>
 <script src="/src/devbuttons.js"></script>
+<script src="/styles/flagsAnim.js"></script>
+
 </body>
 </html>

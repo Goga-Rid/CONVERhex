@@ -2,9 +2,13 @@ function swapSelectedOptions() {
   const leftSelect = document.getElementById('leftSelect');
   const rightSelect = document.getElementById('rightSelect');
 
-  const value1 = leftSelect.value;
-  const value2 = rightSelect.value;
+  const tempOption = leftSelect.options[leftSelect.selectedIndex].value;
+  leftSelect.value = rightSelect.options[rightSelect.selectedIndex].value;
+  rightSelect.value = tempOption;
 
-  document.getElementById('leftSelect').value = value2;
-  document.getElementById('rightSelect').value = value1;
+  const leftInput = document.getElementById('currencies');
+  const rightInput = document.getElementById('base_currency');
+  const tempValue = leftInput.value;
+  leftInput.value = rightInput.value;
+  rightInput.value = tempValue;
 }
