@@ -11,11 +11,11 @@ function changeFlagImage(flagId, selectId) {
   let imagePath;
 
   if (selectedValue === 'RUB') {
-    imagePath = './images/flags/russia.png';
+    imagePath = './images/flags/RUB.png';
   } else if (selectedValue === 'USD') {
-    imagePath = './images/flags/united-states.png';
+    imagePath = './images/flags/USD.png';
   } else if (selectedValue === 'EUR') {
-    imagePath = './images/flags/european-union.png';
+    imagePath = './images/flags/EUR.png';
   }
 
   flagImage.src = imagePath;
@@ -29,4 +29,4 @@ function changeFlagImage(flagId, selectId) {
   }
 }
 
-export default changeFlagImage;
+
