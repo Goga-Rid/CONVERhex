@@ -26,15 +26,20 @@
     </button>
 </div>
 
-  <div class="textline">
-    <p>Currency Converter - from CONVERhex will help you quickly convert one currency to another at the current market rate.</p>
-    <p>All popular currency pairs in one converter - just enter the currency and the amount, and the service will calculate everything automatically!</p>
+  <div class="description">
+    <div class="textline">
+      <p>Currency Converter - from CONVERhex will help you quickly convert one currency to another at the current market rate.</p>
+      <p>All popular currency pairs in one converter - just enter the currency and the amount, and the service will calculate</p>
+      <p> everything automatically!</p>
+    </div>
   </div>
   
   <div class="all-content">
       <div class="valute-cards" id="AJ">
         <div class="valute-card-all">
-          <div class="calc__title">I want to exchange</div>
+          <div class="calc_title">
+            <h2 class="text_card">I want to exchange</h2>
+          </div>
           <div class="input-group mb-3">
             <input type="number" min="0" class="form-control" id="inputV" aria-label="Text input with dropdown button" oninput="validity.valid||(value='');">
           </div>
@@ -50,11 +55,13 @@
         </div>
 
         <button class="btn btn-reverse" id="reversButton" onclick="changeOptionAndImage()">
-          <svg width="60" height="58" viewBox="0 4 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="Converter_button__dd8bX SwapButton_button__vl_3z"><circle cx="16" cy="16" r="16"></circle><path d="M20.1025 14.793L22.9995 11.897L20.1025 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 11.9H23" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11.897 17.207L9 20.103L11.897 23" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M23 20.1H9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <svg width="60" height="58" viewBox="0 4 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="Converter_button__dd8bX SwapButton_button__vl_3z"><circle cx="16" cy="16" r="16"></circle><path d="M20.1025 14.793L22.9995 11.897L20.1025 9" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="strelochka"></path><path d="M9 11.9H23" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="strelochka"></path><path d="M11.897 17.207L9 20.103L11.897 23" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="strelochka"></path><path d="M23 20.1H9" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="strelochka"></path></svg>
         </button>
 
         <div class="valute-card-all">
-          <div class="calc__title">I want to get</div>
+          <div class="calc_title">
+            <h3 class="text_card">I want to get</h3>
+          </div>
 
           <div class="input-group mb-3">
             <input type="number" min="0" class="form-control" id="resultV" aria-label="Text input with dropdown button" oninput="validity.valid||(value='');">
@@ -102,6 +109,7 @@
 <script src="/styles/flagsAnim.js"></script>
 <script>
   var btn = document.querySelector('.btn');
+  var strelka = document.querySelector('.strelochka')
 
 btn.addEventListener('mousemove', function(e) {
   var rect = btn.getBoundingClientRect();
