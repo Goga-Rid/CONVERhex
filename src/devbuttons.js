@@ -5,6 +5,6 @@ function swapSelectedOptions() {
   const value1 = leftSelect.value;
   const value2 = rightSelect.value;
 
-  leftSelect.value = value2;
-  rightSelect.value = value1;
+  document.getElementById('leftSelect').value = value2;
+  document.getElementById('rightSelect').value = value1;
 }
