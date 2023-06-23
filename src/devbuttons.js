@@ -1,14 +1,21 @@
-function swapSelectedOptions() {
-  const leftSelect = document.getElementById('leftSelect');
-  const rightSelect = document.getElementById('rightSelect');
+function changeOptionAndImage() {
+  var leftSelect = document.getElementById('leftSelect');
+  var rightSelect = document.getElementById('rightSelect');
+  var flagImage1 = document.getElementById('flagImage1');
+  var flagImage2 = document.getElementById('flagImage2');
 
-  const tempOption = leftSelect.options[leftSelect.selectedIndex].value;
-  leftSelect.value = rightSelect.options[rightSelect.selectedIndex].value;
-  rightSelect.value = tempOption;
+  // Получаем выбранное значение в левом и правом селекторах
+  var leftValue = leftSelect.value;
+  var rightValue = rightSelect.value;
 
-  const leftInput = document.getElementById('currencies');
-  const rightInput = document.getElementById('base_currency');
-  const tempValue = leftInput.value;
-  leftInput.value = rightInput.value;
-  rightInput.value = tempValue;
+  // Меняем значение выбранного элемента в левом селекторе
+  leftSelect.value = rightValue;
+  // Меняем значение выбранного элемента в правом селекторе
+  rightSelect.value = leftValue;
+
+
+  // Меняем картинку, связанную с выбранным значением в левом селекторе
+  flagImage1.src = './images/flags/' + rightValue + '.png';
+  // Меняем картинку, связанную с выбранным значением в правом селекторе
+  flagImage2.src = './images/flags/' + leftValue + '.png';
 }
