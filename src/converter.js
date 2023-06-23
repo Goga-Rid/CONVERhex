@@ -1,4 +1,4 @@
-import generationQuer from "../index.js";
+import generationQuer from '../index.js';
 
 const rates = generationQuer();
 console.log(rates);
