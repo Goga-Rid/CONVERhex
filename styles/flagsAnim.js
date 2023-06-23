@@ -28,3 +28,5 @@ function changeFlagImage(flagId, selectId) {
     alert('Выбрана одинаковая валюта в обоих полях');
   }
 }
+
+export default changeFlagImage;
