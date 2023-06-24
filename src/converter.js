@@ -3,51 +3,58 @@ const rates = {};
 async function getCurrencies() {
   const response = await fetch('https://www.cbr-xml-daily.ru/daily_json.js');
   const data = await response.json();
-  const result = await data;
 
-  rates.USD = result.Valute.USD;
-  rates.EUR = result.Valute.EUR;
+  rates.USD = data.Valute.USD;
+  rates.EUR = data.Valute.EUR;
 }
+
+function calculateResult() {
+  const inputValue = parseFloat(input.value);
+  const leftValue = leftSelect.value;
+  const rightValue = rightSelect.value;
+
+  if (leftValue === 'RUB') {
+    result.value = (inputValue / rates[rightValue].Value).toFixed(2);
+  } else if (rightValue === 'RUB') {
+    result.value = (inputValue * rates[leftValue].Value).toFixed(2);
+  } else {
+    result.value = (inputValue * (rates[leftValue].Value / rates[rightValue].Value)).toFixed(2);
+  }
+}
+
+function calculateReverseResult() {
+  const resultValue = parseFloat(result.value);
+  const leftValue = leftSelect.value;
+  const rightValue = rightSelect.value;
+
+  if (leftValue === 'RUB') {
+    input.value = (resultValue * rates[rightValue].Value).toFixed(2);
+  } else if (rightValue === 'RUB') {
+    input.value = (resultValue / rates[leftValue].Value).toFixed(2);
+  } else {
+    input.value = (resultValue * (rates[rightValue].Value / rates[leftValue].Value)).toFixed(2);
+  }
+}
+
+const input = document.getElementById('inputV');
+const result = document.getElementById('resultV');
+const leftSelect = document.getElementById('leftSelect');
+const rightSelect = document.getElementById('rightSelect');
+
+input.addEventListener('input', calculateResult);
+result.addEventListener('input', calculateReverseResult);
+leftSelect.addEventListener('change', function () {
+  calculateResult();
+  changeFlagImage('flagImage1', 'leftSelect');
+});
+rightSelect.addEventListener('input', function () {
+  calculateResult();
+  changeFlagImage('flagImage2', 'rightSelect');
+});
 
 getCurrencies();
 
-const input = document.querySelector('#inputV');
-const result = document.querySelector('#resultV');
-const leftSelect = document.querySelector('#leftSelect');
-const rightSelect = document.querySelector('#rightSelect');
-
-input.oninput = function () {
-  if (leftSelect.value === 'RUB') {
-    result.value = (parseFloat(input.value) / rates[rightSelect.value].Value).toFixed(2);
-  }
-  if (rightSelect.value === 'RUB') {
-    result.value = (parseFloat(input.value * rates[leftSelect.value].Value)).toFixed(2);
-  } else {
-    result.value = (parseFloat(input.value
-      * (rates[leftSelect.value].Value / rates[rightSelect.value].Value))).toFixed(2);
-  }
-};
-
-leftSelect.onchange = function () {
-  if (leftSelect.value === 'RUB') {
-    result.value = (parseFloat(input.value) / rates[rightSelect.value].Value).toFixed(2);
-  }
-  if (rightSelect.value === 'RUB') {
-    result.value = (parseFloat(input.value * rates[leftSelect.value].Value)).toFixed(2);
-  } else {
-    result.value = (parseFloat(input.value
-      * (rates[leftSelect.value].Value / rates[rightSelect.value].Value))).toFixed(2);
-  }
-};
-
-rightSelect.onchange = function () {
-  if (leftSelect.value === 'RUB') {
-    result.value = (parseFloat(input.value) / rates[rightSelect.value].Value).toFixed(2);
-  }
-  if (rightSelect.value === 'RUB') {
-    result.value = (parseFloat(input.value * rates[leftSelect.value].Value)).toFixed(2);
-  } else {
-    result.value = (parseFloat(input.value
-      * (rates[leftSelect.value].Value / rates[rightSelect.value].Value))).toFixed(2);
-  }
+window.onload = function () {
+  changeFlagImage('flagImage1', 'leftSelect');
+  changeFlagImage('flagImage2', 'rightSelect');
 };

@@ -192,6 +192,7 @@ a:hover{
   display: block;
   width: 100%;
 }
+
 .foot_blck {
   display: block;
   width: 94%;
@@ -202,12 +203,14 @@ a:hover{
   padding-top: 15px;
   padding-bottom: 10px;
 }
+
 .foot_levo {
   display: inline-block;
   width: 100%;
   text-align: center;
   vertical-align: middle;
 }
+
 .github {
 display: inline-block;
   width: 100%;
@@ -219,10 +222,12 @@ display: inline-block;
 #footer img {
   vertical-align: bottom;
 }
+
 .foot_levo img {
   margin-bottom: 3px;
   width: 150px;
 }
+
 .calc_title {
     margin-block-end: 7%;
     margin-top:-19px;
@@ -282,17 +287,16 @@ display: inline-block;
   transition: width 0.5s, height 0.5s;
   background: #246ef5;
 }
-.btn:hover:before
-{
+
+.btn:hover:before{
   width: 250px;
   height: 250px;
 }
 
-.btn:hover .strelochka {
+.btn:hover .strelochka{
   stroke: white;
   transition-duration: 0.8s;
 }
-
 
 .description {
   margin-top: 20px;
