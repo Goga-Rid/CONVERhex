@@ -1,8 +1,3 @@
-window.onload = function () {
-  changeFlagImage('flagImage1');
-  changeFlagImage('flagImage2');
-};
-
 function changeFlagImage(flagId, selectId) {
   const select = document.getElementById(selectId);
   const flagImage = document.getElementById(flagId);
@@ -26,7 +21,12 @@ function changeFlagImage(flagId, selectId) {
 
   if (selectedValue === otherSelectedValue) {
     alert('Выбрана одинаковая валюта в обоих полях');
+    const options = select.options;
+    const selectedIndex = select.selectedIndex;
+    const nextIndex = (selectedIndex + 1) % options.length;
+    select.selectedIndex = nextIndex;
+    changeFlagImage(flagId, selectId); // Вызов функции с новым значением после изменения selectedIndex
+    return; 
   }
-}
-
+};
 
