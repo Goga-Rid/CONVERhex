@@ -30,10 +30,6 @@ body {
     position: relative;
     height: 100vh; 
     font-family: 'Noto Sans HK', Arial, Helvetica, sans-serif;
-    /* background: 
-    url("../images/backgr.jpg");
-    -webkit-background-size: cover;
-    background-size: cover; */
     background-color: #ffffff;
 }
 /* Название продукта */

@@ -43,11 +43,11 @@ const rightSelect = document.getElementById('rightSelect');
 
 input.addEventListener('input', calculateResult);
 result.addEventListener('input', calculateReverseResult);
-leftSelect.addEventListener('change', function () {
+leftSelect.addEventListener('change', () => {
   calculateResult();
   changeFlagImage('flagImage1', 'leftSelect');
 });
-rightSelect.addEventListener('input', function () {
+rightSelect.addEventListener('input', () => {
   calculateResult();
   changeFlagImage('flagImage2', 'rightSelect');
 });

@@ -21,12 +21,10 @@ function changeFlagImage(flagId, selectId) {
 
   if (selectedValue === otherSelectedValue) {
     alert('Выбрана одинаковая валюта в обоих полях');
-    const options = select.options;
-    const selectedIndex = select.selectedIndex;
+    const { options } = select;
+    const { selectedIndex } = select;
     const nextIndex = (selectedIndex + 1) % options.length;
     select.selectedIndex = nextIndex;
-    changeFlagImage(flagId, selectId); // Вызов функции с новым значением после изменения selectedIndex
-    return; 
+    changeFlagImage(flagId, selectId);
   }
-};
-
+}
