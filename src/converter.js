@@ -8,7 +8,7 @@ async function getCurrencies() {
   rates.EUR = data.Valute.EUR;
 }
 
-// getCurrencies();
+// getCurrencies(); - DELETE COMMENT FOR WORK CONVERT OPERATIONS
 
 const input = document.getElementById('inputV');
 const result = document.getElementById('resultV');
