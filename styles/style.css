@@ -167,6 +167,7 @@ button{
   margin-left: 10px;
   margin: 10px;
   background-color: #f4f4f4;
+  font-family: 'JetBrains Mono', sans-serif;;
 }
 
 .form-select:focus{
@@ -382,7 +383,10 @@ a:hover{
   z-index: 2;
   font-family: 'JetBrains Mono';
   font-size: 12px;
+  font-weight: bold;
 }
+
+
 .input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
   border-top-right-radius: 24px;
   border-bottom-right-radius: 24px;
