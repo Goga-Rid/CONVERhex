@@ -8,6 +8,13 @@ async function getCurrencies() {
   rates.EUR = data.Valute.EUR;
 }
 
+// getCurrencies(); - DELETE COMMENT FOR WORK CONVERT OPERATIONS
+
+const input = document.getElementById('inputV');
+const result = document.getElementById('resultV');
+const leftSelect = document.getElementById('leftSelect');
+const rightSelect = document.getElementById('rightSelect');
+
 function calculateResult() {
   const inputValue = parseFloat(input.value);
   const leftValue = leftSelect.value;
@@ -36,11 +43,6 @@ function calculateReverseResult() {
   }
 }
 
-const input = document.getElementById('inputV');
-const result = document.getElementById('resultV');
-const leftSelect = document.getElementById('leftSelect');
-const rightSelect = document.getElementById('rightSelect');
-
 input.addEventListener('input', calculateResult);
 result.addEventListener('input', calculateReverseResult);
 leftSelect.addEventListener('change', () => {
@@ -51,8 +53,6 @@ rightSelect.addEventListener('input', () => {
   calculateResult();
   changeFlagImage('flagImage2', 'rightSelect');
 });
-
-getCurrencies();
 
 window.onload = function () {
   changeFlagImage('flagImage1', 'leftSelect');
