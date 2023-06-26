@@ -142,6 +142,10 @@ button{
   height: 40px;
   margin-left: 15px;
 }
+ /*input block*/
+
+
+
 
 .form-control{
   border-radius: 24px;
@@ -309,22 +313,25 @@ a:hover{
  .btn{
   position: relative;
   display: inline-flex;
-  margin: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   border: 0;
   border-radius: 24px;
   background-color: #f4f4f4;
-  padding: 7px 30px;
+  padding: 7px 0px;
   letter-spacing: 1px;
   overflow: hidden;
   border: 1px #000000 solid;
 }
 
-.btn svg
+.btn  svg
 {
   position: relative;
   z-index: 1;
-  width: 100%;
-  height: auto;
+  min-height: 60px;
+  min-width: 3rem;
 }
 
 .btn:before
