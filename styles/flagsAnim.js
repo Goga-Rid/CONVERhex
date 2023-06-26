@@ -1,3 +1,5 @@
+const leftSelect = document.getElementById('leftSelect');
+
 function changeFlagImage(flagId, selectId) {
   const select = document.getElementById(selectId);
   const flagImage = document.getElementById(flagId);
@@ -26,5 +28,7 @@ function changeFlagImage(flagId, selectId) {
     const nextIndex = (selectedIndex + 1) % options.length;
     select.selectedIndex = nextIndex;
     changeFlagImage(flagId, selectId);
+    const event = new Event('change');
+    leftSelect.dispatchEvent(event);
   }
 }
