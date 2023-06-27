@@ -62,12 +62,12 @@ window.onload = function () {
 const label1 = document.getElementById('label1');
 const label2 = document.getElementById('label2');
 
-input.addEventListener('input', function() {
+input.addEventListener('input', () => {
   label1.style.display = input.value ? 'none' : 'block';
   label2.style.display = input.value ? 'none' : 'block';
 });
 
-result.addEventListener('input', function() {
+result.addEventListener('input', () => {
   label1.style.display = input.value ? 'none' : 'block';
   label2.style.display = input.value ? 'none' : 'block';
 });

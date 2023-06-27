@@ -19,20 +19,21 @@
 
 <body>
   <div class="header fixed-header">
-    <img src="./images/logo.png" alt="logo" class="logo">
-    <div class="cssFont_1">Currency converter</div>
-    <button class="mainmenu" type="button" onclick="window.location.reload();" value="main">
+
+    <img src="./images/logo.png" alt="logo" class="logo noselect">
+    <div class="cssFont_1 noselect" data-translate="header_title" id="textDrop1">Currency converter</div>
+    <button class="mainmenu" type="button" onclick="window.location.reload();" value="main" data-translate="header_button">
       Main 
     </button>
     <button class="switch_ru" onclick="changeLanguage('ru')"><img class="ru_flag" src="./images/russia.png" alt="ru-lang"></button>
-  <button class="switch_uk" onclick="changeLanguage('uk')"><img class="uk_flag" src="./images/united-kingdom.png" alt="uk-lang"></button>
+  <button class="switch_en" onclick="changeLanguage('en')"><img class="en_flag" src="./images/united-kingdom.png" alt="en-lang"></button>
 </div>
 
-  <div class="description">
+  <div class="description" id="textDrop2">
     <div class="textline">
-      <p>Currency Converter - from CONVERhex will help you quickly convert one currency to another at the current market rate.</p>
-      <p>All popular currency pairs in one converter - just enter the currency and the amount, and the service will calculate</p>
-      <p> everything automatically!</p>
+      <p data-translate="textline_one">Currency Converter - from CONVERhex will help you quickly convert one currency to another at the current market rate.</p>
+      <p data-translate="textline_two">All popular currency pairs in one converter - just enter the currency and the amount, and the service will calculate</p>
+      <p data-translate="textline_three"> everything automatically!</p>
     </div>
   </div>
   
@@ -40,19 +41,19 @@
       <div class="valute-cards" id="AJ">
         <div class="valute-card-all">
           <div class="calc_title">
-            <h2 class="text_card">I want to exchange</h2>
+            <h2 class="text_card" data-translate="text_card_one">I want to exchange</h2>
           </div>
           <div class="input-group mb-3">
             <input type="number" min="0" class="form-control" id="inputV" aria-label="Text input with dropdown button" oninput="validity.valid||(value='');">
-            <label class="label-from-inp" for="inputV" id="label1">Enter the amount</label>
+            <label class="label-from-inp" for="inputV" id="label1" data-translate="labels">Enter the amount</label>
           </div>
 
           <div class="flags-and-select">
             <img class="flags" id="flagImage1" src ="./images/flags/RUB.png" alt="flags-country">
             <select class="form-select" id="leftSelect" onchange="changeFlagImage('flagImage1', 'leftSelect')">
-              <option selected class="icon_rub" value="RUB" id="ru1">Russian Ruble</option>
-              <option class="icon_usd" value="USD" id="usd1">US Dollar</option>
-             <option class="icon_eur" value="EUR" id="eur1">Euro</option>
+              <option selected class="icon" value="RUB" id="ru1" data-translate="russian_currency">Russian Ruble</option>
+              <option class="icon" value="USD" id="usd1" data-translate="american_currency">US Dollar</option>
+             <option class="icon" value="EUR" id="eur1" data-translate="europian_currency">Euro</option>
            </select>
           </div>
         </div>
@@ -63,20 +64,20 @@
 
         <div class="valute-card-all">
           <div class="calc_title">
-            <h3 class="text_card">I want to get</h3>
+            <h3 class="text_card" data-translate="text_card_two">I want to get</h3>
           </div>
 
           <div class="input-group mb-3">
             <input type="number" min="0" class="form-control" id="resultV" aria-label="Text input with dropdown button" oninput="validity.valid||(value='');">
-            <label class="label-from-inp" for="inputV" id="label2">Enter the amount</label>
+            <label class="label-from-inp" for="inputV" id="label2" data-translate="labels">Enter the amount</label>
           </div>
 
           <div class="flags-and-select">
             <img class="flags" src="./images/flags/USD.png" id="flagImage2" alt="flags-country">
             <select class="form-select" id="rightSelect" onchange="changeFlagImage('flagImage2', 'rightSelect')">
-            <option selected class="icon_usd" value="USD">US Dollar</option>
-            <option class="icon_rub" value="RUB">Russian Ruble</option>
-            <option class="icon_eur" value="EUR">Euro</option>
+            <option selected class="icon" value="USD" data-translate="american_currency">US Dollar</option>
+            <option class="icon" value="RUB" data-translate="russian_currency">Russian Ruble</option>
+            <option class="icon" value="EUR" data-translate="europian_currency">Euro</option>
             </select>
           </div>
         </div>
@@ -102,7 +103,7 @@
     © 2023 ConverHex
     </div>
     <div class="foot_pravo">
-    <button class="foot_contacts" type="button" onclick="window.location.replace('https://t.me/s/Converhex')" value="contacts">
+    <button class="foot_contacts" type="button" onclick="window.location.replace('https://t.me/s/Converhex')" value="contacts" data-translate="footer_button">
       Contacts
     </button> 
         <div class="github" href="https://github.com/Goga-Rid/CONVERhex">
@@ -133,5 +134,6 @@ btn.addEventListener('mousemove', function(e) {
   btn.style.setProperty('--y', y + 'px');
 });
 </script>
+<script src="styles/hideInfoCurrecy.js"></script>
 </body>
 </html>
