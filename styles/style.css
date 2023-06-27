@@ -464,6 +464,7 @@ a:hover{
   .description{max-height: 250px;}
   .textline{font-size: 18px;}
   .cssFont_1{font-size: 30px;}
+}
 
 .header .logo {
   margin-right: auto;
@@ -476,5 +477,4 @@ a:hover{
 
 .header button {
   margin-left: 15px;
-
 }
