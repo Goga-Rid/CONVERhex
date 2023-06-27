@@ -10,8 +10,8 @@ function changeOptionAndImage() {
   leftSelect.value = rightValue;
   rightSelect.value = leftValue;
 
-  flagImage1.src = `./images/flags/${rightValue}.png`;
-  flagImage2.src = `./images/flags/${leftValue}.png`;
+  flagImage1.src = `../images/flags/${rightValue}.png`;
+  flagImage2.src = `../images/flags/${leftValue}.png`;
 
   const input = document.querySelector('#inputV');
   const result = document.querySelector('#resultV');
