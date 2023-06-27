@@ -8,7 +8,7 @@ async function getCurrencies() {
   rates.EUR = data.Valute.EUR;
 }
 
-// getCurrencies(); - DELETE COMMENT FOR WORK CONVERT OPERATIONS
+getCurrencies();
 
 const input = document.getElementById('inputV');
 const result = document.getElementById('resultV');
@@ -58,3 +58,16 @@ window.onload = function () {
   changeFlagImage('flagImage1', 'leftSelect');
   changeFlagImage('flagImage2', 'rightSelect');
 };
+
+const label1 = document.getElementById('label1');
+const label2 = document.getElementById('label2');
+
+input.addEventListener('input', function() {
+  label1.style.display = input.value ? 'none' : 'block';
+  label2.style.display = input.value ? 'none' : 'block';
+});
+
+result.addEventListener('input', function() {
+  label1.style.display = input.value ? 'none' : 'block';
+  label2.style.display = input.value ? 'none' : 'block';
+});

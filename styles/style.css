@@ -39,16 +39,48 @@ h1{
 
 /*шапка*/
 .header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 16px;
-    line-height: 1.5;
-    align-items: center;
-    font-size: 33px;
-    border-bottom: 2px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  line-height: 1.5;
+  font-size: 33px;
+  border-bottom: 2px solid #000;
+}
+
+.switch_uk{
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-top: -21px;
+  background: white;
+  transition-duration: 0.6s;
+  width: 64px;
+  height: 64px;
+}
+
+.uk_flag{
+  width: 64px;
+  height: 64px;
+  border-radius: 15px;
+}
+
+.switch_ru{
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-top: -21px;
+  background: white;
+  transition-duration: 0.6s;
+  width: 64px;
+  height: 64px;
+  border-radius: 15px;
+}
+
+.ru_flag{
+  width: 64px;
+  height: 64px;
+  border-radius: 15px;
 }
 
 /*логотип*/
@@ -59,6 +91,7 @@ h1{
 .textline {
   font-family: 'JetBrains Mono';
   margin-top: 30px;
+  margin-bottom: 30px;
   line-height: 1;
   font-size: 25px;
   color: #000000;
@@ -142,12 +175,9 @@ button{
   height: 40px;
   margin-left: 15px;
 }
- /*input block*/
-
-
-
-
+ 
 .form-control{
+  font-family: 'JetBrains Mono', sans-serif;;
   border-radius: 24px;
   margin: 10px;
   height: 40px;
@@ -167,6 +197,7 @@ button{
   margin-left: 10px;
   margin: 10px;
   background-color: #f4f4f4;
+  font-family: 'JetBrains Mono', sans-serif;;
 }
 
 .form-select:focus{
@@ -372,4 +403,48 @@ a:hover{
   width:100%;
   height: 100%;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
+}
+
+.label-from-inp {
+  position: absolute;
+  color: #777;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  font-family: 'JetBrains Mono';
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out;
+}
+
+.scroll-up {
+  top: -100px;
+}
+
+.header .logo {
+  margin-right: auto;
+}
+
+.header .cssFont_1 {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.header button {
+  margin-left: 15px;
 }
