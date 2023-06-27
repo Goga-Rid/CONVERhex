@@ -19,8 +19,9 @@
 
 <body>
   <div class="header fixed-header">
-    <img src="./images/logo.png" alt="logo" class="logo">
-    <div class="cssFont_1" data-translate="header_title">Currency converter</div>
+
+    <img src="./images/logo.png" alt="logo" class="logo noselect">
+    <div class="cssFont_1 noselect" data-translate="header_title" id="textDrop1">Currency converter</div>
     <button class="mainmenu" type="button" onclick="window.location.reload();" value="main" data-translate="header_button">
       Main 
     </button>
@@ -28,7 +29,7 @@
   <button class="switch_en" onclick="changeLanguage('en')"><img class="en_flag" src="./images/united-kingdom.png" alt="en-lang"></button>
 </div>
 
-  <div class="description">
+  <div class="description" id="textDrop2">
     <div class="textline">
       <p data-translate="textline_one">Currency Converter - from CONVERhex will help you quickly convert one currency to another at the current market rate.</p>
       <p data-translate="textline_two">All popular currency pairs in one converter - just enter the currency and the amount, and the service will calculate</p>
@@ -133,5 +134,6 @@ btn.addEventListener('mousemove', function(e) {
   btn.style.setProperty('--y', y + 'px');
 });
 </script>
+<script src="styles/hideInfoCurrecy.js"></script>
 </body>
 </html>
