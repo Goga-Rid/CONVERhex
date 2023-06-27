@@ -32,3 +32,5 @@ function changeFlagImage(flagId, selectId) {
     leftSelect.dispatchEvent(event);
   }
 }
+
+export default changeFlagImage;
