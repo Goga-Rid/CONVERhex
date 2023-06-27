@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="../styles/style.css">
   <link href="https://fonts.cdnfonts.com/css/jetbrains-mono-2" rel="stylesheet">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/imed/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/imed/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/imed/favicon-16x16.png">
-  <link rel="manifest" href="images/imed/site.webmanifest">
-  <link rel="mask-icon" href="images/imed/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/imed/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/imed/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/imed/favicon-16x16.png">
+  <link rel="manifest" href="../images/imed/site.webmanifest">
+  <link rel="mask-icon" href="../images/imed/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#ffc40d">
   <meta name="theme-color" content="#ffffff">
   <title>ConverHex</title>
@@ -19,20 +19,20 @@
 
 <body>
   <div class="header fixed-header">
-    <img src="./images/logo.png" alt="logo" class="logo noselect">
-    <div class="cssFont_1 noselect" id="textDrop1">Currency converter</div>
+    <img src="../images/logo.png" alt="logo" class="logo">
+    <div class="cssFont_1">Конвертер валюты</div>
     <button class="mainmenu" type="button" onclick="window.location.reload();" value="main">
-      Main 
+      Главная 
     </button>
-    <button class="switch_ru" onclick="changeLanguage('ru')"><img class="ru_flag" src="./images/russia.png" alt="ru-lang"></button>
-  <button class="switch_uk" onclick="changeLanguage('uk')"><img class="uk_flag" src="./images/united-kingdom.png" alt="uk-lang"></button>
+    <button class="switch_ru" onclick="changeLanguage('ru')"><img class="ru_flag" src="../images/russia.png" alt="ru-lang"></button>
+  <button class="switch_uk" onclick="changeLanguage('uk')"><img class="uk_flag" src="../images/united-kingdom.png" alt="uk-lang"></button>
 </div>
 
-  <div class="description" id="textDrop2">
+  <div class="description">
     <div class="textline">
-      <p>Currency Converter - from CONVERhex will help you quickly convert one currency to another at the current market rate.</p>
-      <p>All popular currency pairs in one converter - just enter the currency and the amount, and the service will calculate</p>
-      <p> everything automatically!</p>
+      <p>Конвертер валют - от CONVERhex поможет вам быстро конвертировать одну валюту в другую по текущему рыночному курсу.</p>
+      <p>Все популярные валютные пары в одном конвертере - просто введите валюту и сумму, и сервис рассчитает</p>
+      <p>все автоматически!</p>
     </div>
   </div>
   
@@ -40,19 +40,19 @@
       <div class="valute-cards" id="AJ">
         <div class="valute-card-all">
           <div class="calc_title">
-            <h2 class="text_card">I want to exchange</h2>
+            <h2 class="text_card">Я хочу обменять</h2>
           </div>
           <div class="input-group mb-3">
             <input type="number" min="0" class="form-control" id="inputV" aria-label="Text input with dropdown button" oninput="validity.valid||(value='');">
-            <label class="label-from-inp" for="inputV" id="label1">Enter the amount</label>
+            <label class="label-from-inp" for="inputV" id="label1">Введите сумму</label>
           </div>
 
           <div class="flags-and-select">
-            <img class="flags" id="flagImage1" src ="./images/flags/RUB.png" alt="flags-country">
+            <img class="flags" id="flagImage1" src ="../images/flags/RUB.png" alt="flags-country">
             <select class="form-select" id="leftSelect" onchange="changeFlagImage('flagImage1', 'leftSelect')">
-              <option selected class="icon" value="RUB" id="ru1">Russian Ruble</option>
-              <option class="icon" value="USD" id="usd1">US Dollar</option>
-             <option class="icon" value="EUR" id="eur1">Euro</option>
+              <option selected class="icon" value="RUB" id="ru1">Российский рубль</option>
+              <option class="icon" value="USD" id="usd1">Доллар США</option>
+             <option class="icon" value="EUR" id="eur1">Евро</option>
            </select>
           </div>
         </div>
@@ -63,20 +63,20 @@
 
         <div class="valute-card-all">
           <div class="calc_title">
-            <h3 class="text_card">I want to get</h3>
+            <h3 class="text_card">Я хочу получить</h3>
           </div>
 
           <div class="input-group mb-3">
             <input type="number" min="0" class="form-control" id="resultV" aria-label="Text input with dropdown button" oninput="validity.valid||(value='');">
-            <label class="label-from-inp" for="inputV" id="label2">Enter the amount</label>
+            <label class="label-from-inp" for="inputV" id="label2">Введите сумму</label>
           </div>
 
           <div class="flags-and-select">
-            <img class="flags" src="./images/flags/USD.png" id="flagImage2" alt="flags-country">
+            <img class="flags" src="../images/flags/USD.png" id="flagImage2" alt="flags-country">
             <select class="form-select" id="rightSelect" onchange="changeFlagImage('flagImage2', 'rightSelect')">
-            <option selected class="icon" value="USD">US Dollar</option>
-            <option class="icon" value="RUB">Russian Ruble</option>
-            <option class="icon" value="EUR">Euro</option>
+            <option selected class="icon" value="USD">Доллар США</option>
+            <option class="icon" value="RUB">Российский рубль</option>
+            <option class="icon" value="EUR">Евро</option>
             </select>
           </div>
         </div>
@@ -103,7 +103,7 @@
     </div>
     <div class="foot_pravo">
     <button class="foot_contacts" type="button" onclick="window.location.replace('https://t.me/s/Converhex')" value="contacts">
-      Contacts
+      Контакты
     </button> 
         <div class="github" href="https://github.com/Goga-Rid/CONVERhex">
           <a href="https://github.com/Goga-Rid/CONVERhex">
@@ -114,13 +114,13 @@
     </div>
   </div>
 </footer>
-<script type="module" src="/index.js"></script>
-<script src="/styles/adaptive.js"></script>
-<script type="module" src="/src/converter.js"></script>
-<script src="/src/devbuttons.js"></script>
-<script src="/styles/flagsAnim.js"></script>
-<script src="./styles/scroll.js"></script>
-<script src="./src/language.js  "></script>
+<script type="module" src="../index.js"></script>
+<script src="../styles/adaptive.js"></script>
+<script type="module" src="../src/converter.js"></script>
+<script src="../src/devbuttons.js"></script>
+<script src="../styles/flagsAnim.js"></script>
+<script src="../styles/scroll.js"></script>
+<script src="../src/language.js  "></script>
 <script>
   const btn = document.querySelector('.btn');
   const strelka = document.querySelector('.strelochka')
@@ -133,6 +133,5 @@ btn.addEventListener('mousemove', function(e) {
   btn.style.setProperty('--y', y + 'px');
 });
 </script>
-<script src="styles/hideInfoCurrecy.js"></script>
 </body>
 </html>

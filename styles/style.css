@@ -41,16 +41,48 @@ h1{
 
 /*шапка*/
 .header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 16px;
-    line-height: 1.5;
-    align-items: center;
-    font-size: 33px;
-    border-bottom: 2px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  line-height: 1.5;
+  font-size: 33px;
+  border-bottom: 2px solid #000;
+}
+
+.switch_uk{
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-top: -21px;
+  background: white;
+  transition-duration: 0.6s;
+  width: 64px;
+  height: 64px;
+}
+
+.uk_flag{
+  width: 64px;
+  height: 64px;
+  border-radius: 15px;
+}
+
+.switch_ru{
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-top: -21px;
+  background: white;
+  transition-duration: 0.6s;
+  width: 64px;
+  height: 64px;
+  border-radius: 15px;
+}
+
+.ru_flag{
+  width: 64px;
+  height: 64px;
+  border-radius: 15px;
 }
 
 /*логотип*/
@@ -61,6 +93,7 @@ h1{
 .textline {
   font-family: 'JetBrains Mono';
   margin-top: 30px;
+  margin-bottom: 30px;
   line-height: 1;
   font-size: 25px;
   color: #000000;
@@ -143,12 +176,9 @@ button{
   height: 40px;
   margin-left: 15px;
 }
- /*input block*/
-
-
-
-
+ 
 .form-control{
+  font-family: 'JetBrains Mono', sans-serif;;
   border-radius: 24px;
   margin: 10px;
   height: 40px;
@@ -412,6 +442,7 @@ a:hover{
   top: -100px;
 }
 
+
 .drop--text{
   top: 100px;
   opacity: 1;
@@ -426,8 +457,6 @@ a:hover{
 	user-select: none;
 }
 
-
-
 @media screen and (max-width: 884px){
   .description{max-height: 320px;}
 }
@@ -435,4 +464,17 @@ a:hover{
   .description{max-height: 250px;}
   .textline{font-size: 18px;}
   .cssFont_1{font-size: 30px;}
+
+.header .logo {
+  margin-right: auto;
+}
+
+.header .cssFont_1 {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.header button {
+  margin-left: 15px;
+
 }
