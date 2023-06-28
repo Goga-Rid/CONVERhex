@@ -4,7 +4,7 @@
   "description": "a website that performs the function of currency conversion",
   "main": "index.js",
   "scripts": {
-    "test": "npx jest"
+    "test": "jest --env=jsdom"
   },
   "repository": {
     "type": "git",

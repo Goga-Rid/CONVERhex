@@ -1,10 +1,4 @@
-const leftSelect = document.getElementById('leftSelect');
-
-function changeFlagImage(flagId, selectId) {
-  const select = document.getElementById(selectId);
-  const flagImage = document.getElementById(flagId);
-  const selectedValue = select.value;
-
+const choosingTheCurrencyPath = (selectedValue, flagImage) => {
   let imagePath;
 
   if (selectedValue === 'RUB') {
@@ -14,15 +8,14 @@ function changeFlagImage(flagId, selectId) {
   } else if (selectedValue === 'EUR') {
     imagePath = '../images/flags/EUR.png';
   }
-
   flagImage.src = imagePath;
+  return(flagImage, imagePath);
+};
 
-  const otherSelectId = selectId === 'leftSelect' ? 'rightSelect' : 'leftSelect';
-  const otherSelect = document.getElementById(otherSelectId);
-  const otherSelectedValue = otherSelect.value;
-
+const checkingForTheSameSelect = (selectedValue, otherSelectedValue) => {
   if (selectedValue === otherSelectedValue) {
     alert('Выбрана одинаковая валюта в обоих полях | Selected the same currency in both fields');
+    const leftSelect = document.getElementById('leftSelect');
     const { options } = select;
     const { selectedIndex } = select;
     const nextIndex = (selectedIndex + 1) % options.length;
@@ -33,4 +26,18 @@ function changeFlagImage(flagId, selectId) {
   }
 }
 
-export default changeFlagImage;
+function changeFlagImage(flagId, selectId) {
+  const select = document.getElementById(selectId);
+  const flagImage = document.getElementById(flagId);
+  const selectedValue = select.value;
+
+  choosingTheCurrencyPath(selectedValue, flagImage);
+
+  const otherSelectId = selectId === 'leftSelect' ? 'rightSelect' : 'leftSelect';
+  const otherSelect = document.getElementById(otherSelectId);
+  const otherSelectedValue = otherSelect.value;
+
+  checkingForTheSameSelect(selectedValue, otherSelectedValue, leftSelect);
+}
+
+module.exports = {changeFlagImage, choosingTheCurrencyPath, checkingForTheSameSelect};
