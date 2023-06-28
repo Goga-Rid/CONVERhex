@@ -58,7 +58,3 @@ test('is there a path to EUR', () => {
 
     expect(changeFlagImage(flagId, selectId)).toEqual('../images/flags/EUR.png');
 });
-
-test('identical select', () => {
-
-});
