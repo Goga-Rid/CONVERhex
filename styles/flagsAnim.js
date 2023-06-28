@@ -2,11 +2,11 @@ const choosingTheCurrencyPath = (selectedValue, flagImage) => {
   let imagePath;
 
   if (selectedValue === 'RUB') {
-    imagePath = '../images/flags/RUB.png';
+    imagePath = './images/flags/RUB.png';
   } else if (selectedValue === 'USD') {
-    imagePath = '../images/flags/USD.png';
+    imagePath = './images/flags/USD.png';
   } else if (selectedValue === 'EUR') {
-    imagePath = '../images/flags/EUR.png';
+    imagePath = './images/flags/EUR.png';
   }
   flagImage.src = imagePath;
   return(flagImage, imagePath);
