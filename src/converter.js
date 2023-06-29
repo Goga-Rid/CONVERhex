@@ -15,7 +15,7 @@ const result = document.getElementById('resultV');
 const leftSelect = document.getElementById('leftSelect');
 const rightSelect = document.getElementById('rightSelect');
 
-function initVars() {
+function initVars() { // fix code climate warning
   const leftValue = leftSelect.value;
   const rightValue = rightSelect.value;
   return [leftValue, rightValue];
