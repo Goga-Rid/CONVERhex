@@ -9,5 +9,9 @@ parserOptions:
 rules: {
   "import/extensions": 0,
   "import/no-relative-packages": 0,
-  
+  "no-alert": "off",
+  "func-names": "off",
+  "quote-props": "off",
+  "quotes": "off",
+  "key-spacing": "off",
 }

@@ -8,10 +8,22 @@ async function getCurrencies() {
   rates.EUR = data.Valute.EUR;
 }
 
-function calculateResult() {
-  const inputValue = parseFloat(input.value);
+getCurrencies();
+
+const input = document.getElementById('inputV');
+const result = document.getElementById('resultV');
+const leftSelect = document.getElementById('leftSelect');
+const rightSelect = document.getElementById('rightSelect');
+
+function initVars() {
   const leftValue = leftSelect.value;
   const rightValue = rightSelect.value;
+  return [leftValue, rightValue];
+}
+
+function calculateResult() {
+  const inputValue = parseFloat(input.value);
+  const [leftValue, rightValue] = initVars();
 
   if (leftValue === 'RUB') {
     result.value = (inputValue / rates[rightValue].Value).toFixed(2);
@@ -24,8 +36,7 @@ function calculateResult() {
 
 function calculateReverseResult() {
   const resultValue = parseFloat(result.value);
-  const leftValue = leftSelect.value;
-  const rightValue = rightSelect.value;
+  const [leftValue, rightValue] = initVars();
 
   if (leftValue === 'RUB') {
     input.value = (resultValue * rates[rightValue].Value).toFixed(2);
@@ -36,25 +47,43 @@ function calculateReverseResult() {
   }
 }
 
-const input = document.getElementById('inputV');
-const result = document.getElementById('resultV');
-const leftSelect = document.getElementById('leftSelect');
-const rightSelect = document.getElementById('rightSelect');
-
-input.addEventListener('input', calculateResult);
-result.addEventListener('input', calculateReverseResult);
-leftSelect.addEventListener('change', () => {
-  calculateResult();
-  changeFlagImage('flagImage1', 'leftSelect');
-});
-rightSelect.addEventListener('input', () => {
-  calculateResult();
-  changeFlagImage('flagImage2', 'rightSelect');
-});
-
-getCurrencies();
+if (input) {
+  input.addEventListener('input', calculateResult);
+}
+if (result) {
+  result.addEventListener('input', calculateReverseResult);
+}
+if (leftSelect) {
+  leftSelect.addEventListener('change', () => {
+    calculateResult();
+    changeFlagImage('flagImage1', 'leftSelect');
+  });
+}
+if (rightSelect) {
+  rightSelect.addEventListener('input', () => {
+    calculateResult();
+    changeFlagImage('flagImage2', 'rightSelect');
+  });
+}
 
 window.onload = function () {
   changeFlagImage('flagImage1', 'leftSelect');
   changeFlagImage('flagImage2', 'rightSelect');
 };
+
+const label1 = document.getElementById('label1');
+const label2 = document.getElementById('label2');
+
+if (input) {
+  input.addEventListener('input', () => {
+    label1.style.display = input.value ? 'none' : 'block';
+    label2.style.display = input.value ? 'none' : 'block';
+  });
+}
+
+if (result) {
+  result.addEventListener('input', () => {
+    label1.style.display = input.value ? 'none' : 'block';
+    label2.style.display = input.value ? 'none' : 'block';
+  });
+}
