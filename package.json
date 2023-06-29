@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "a website that performs the function of currency conversion",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "test": "jest --config=jest.config.cjs"
+    "test": "npx jest"
   },
   "repository": {
     "type": "git",
