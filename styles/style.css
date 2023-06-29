@@ -409,6 +409,7 @@ a:hover{
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
 
 }
+
 .flags-in-courses {
   margin-left: 80%;
   margin-top: -11%;
@@ -511,3 +512,17 @@ a:hover{
   margin-left: 15px;
 }
 
+.font_rate{
+  font-family: 'JetBrains Mono';
+  font-size: 25px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #000000;
+  font-weight: 600;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  transition: all .4s;
+  border-bottom: 2px #246ef5 solid;
+}

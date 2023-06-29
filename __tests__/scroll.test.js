@@ -17,7 +17,6 @@
 // // Загрузка и выполнение скрипта scroll.js
 // window.eval(scrollCode);
 
-
 // header = document.querySelector('.header');
 // // Тесты
 // describe('scroll.js', () => {
@@ -49,7 +48,7 @@
 //   });
 // });
 const { JSDOM } = require('jsdom');
-const { handleScroll } = require('../styles/scroll')
+const { handleScroll } = require('../styles/scroll');
 
 // Создание виртуального DOM с помощью jsdom
 const dom = new JSDOM('<html><body></body></html>', { runScripts: 'outside-only' });
@@ -95,5 +94,3 @@ describe('scroll.js', () => {
     expect(header.classList.contains('scroll-up')).toBe(false);
   });
 });
-
-
