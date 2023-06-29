@@ -87,3 +87,27 @@ if (result) {
     label2.style.display = input.value ? 'none' : 'block';
   });
 }
+
+function getInfoInBlocks() {
+  const USDBlock = document.getElementById('USD-block');
+  const EURBlock = document.getElementById('EUR-block');
+
+  const currUSD = rates.USD.Value;
+  const currEUR = rates.EUR.Value;
+
+  const USDChange = document.getElementById('USD-change');
+  const EURChange = document.getElementById('EUR-change');
+
+  const changeUSD = (currUSD - rates.USD.Previous).toFixed(2);
+  const changeEUR = (currEUR - rates.EUR.Previous).toFixed(2);
+
+  USDChange.textContent = changeUSD > 0 ? '+ ' + changeUSD : changeUSD;
+  EURChange.textContent = changeEUR > 0 ? '+ ' + changeEUR : changeEUR;
+
+  USDBlock.textContent = currUSD.toFixed(2);
+  EURBlock.textContent = currEUR.toFixed(2);
+}
+
+setTimeout(() => {
+  getInfoInBlocks();
+}, 1000);
