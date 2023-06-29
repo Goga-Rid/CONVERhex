@@ -1,6 +1,6 @@
 const { translateText, changeLanguage } = require('../src/language');
 
-describe('Translations', () => {
+describe('language.js', () => {
   beforeEach(() => {
     document.body.innerHTML = `
       <div>
