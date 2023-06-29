@@ -47,6 +47,22 @@ const translations = {
     "en" : "Contacts",
     "ru" : "Контакты",
   },
+  "rateday_title":{
+    "en" : "Currency rate for today:",
+    "ru" : "Курс валюты на сегодня:",
+  },
+  "th_rate1": {
+    "en" : "Currency",
+    "ru" : "Валюта",
+  },
+  "th_rate2": {
+    "en" : "Course(rub)",
+    "ru" : "Курс(руб)",
+  },
+  "th_rate3": {
+    "en" : "Intraday change",
+    "ru" : "Сегодняшнее изменение",
+  },
 };
 
 function translateText(language) {
