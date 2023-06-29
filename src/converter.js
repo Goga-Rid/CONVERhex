@@ -15,10 +15,15 @@ const result = document.getElementById('resultV');
 const leftSelect = document.getElementById('leftSelect');
 const rightSelect = document.getElementById('rightSelect');
 
-function calculateResult() {
-  const inputValue = parseFloat(input.value);
+function initVars() { // fix code climate warning
   const leftValue = leftSelect.value;
   const rightValue = rightSelect.value;
+  return [leftValue, rightValue];
+}
+
+function calculateResult() {
+  const inputValue = parseFloat(input.value);
+  const [leftValue, rightValue] = initVars();
 
   if (leftValue === 'RUB') {
     result.value = (inputValue / rates[rightValue].Value).toFixed(2);
@@ -31,15 +36,14 @@ function calculateResult() {
 
 function calculateReverseResult() {
   const resultValue = parseFloat(result.value);
-  const leftValueR = leftSelect.value;
-  const rightValueR = rightSelect.value;
+  const [leftValue, rightValue] = initVars();
 
-  if (leftValueR === 'RUB') {
-    input.value = (resultValue * rates[rightValueR].Value).toFixed(2);
-  } else if (rightValueR === 'RUB') {
-    input.value = (resultValue / rates[leftValueR].Value).toFixed(2);
+  if (leftValue === 'RUB') {
+    input.value = (resultValue * rates[rightValue].Value).toFixed(2);
+  } else if (rightValue === 'RUB') {
+    input.value = (resultValue / rates[leftValue].Value).toFixed(2);
   } else {
-    input.value = (resultValue * (rates[rightValueR].Value / rates[leftValueR].Value)).toFixed(2);
+    input.value = (resultValue * (rates[rightValue].Value / rates[leftValue].Value)).toFixed(2);
   }
 }
 
