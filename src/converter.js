@@ -15,10 +15,15 @@ const result = document.getElementById('resultV');
 const leftSelect = document.getElementById('leftSelect');
 const rightSelect = document.getElementById('rightSelect');
 
-function calculateResult() {
-  const inputValue = parseFloat(input.value);
+function initVars() {
   const leftValue = leftSelect.value;
   const rightValue = rightSelect.value;
+  return [leftValue, rightValue];
+}
+
+function calculateResult() {
+  const inputValue = parseFloat(input.value);
+  const [leftValue, rightValue] = initVars();
 
   if (leftValue === 'RUB') {
     result.value = (inputValue / rates[rightValue].Value).toFixed(2);
@@ -31,8 +36,7 @@ function calculateResult() {
 
 function calculateReverseResult() {
   const resultValue = parseFloat(result.value);
-  const leftValue = leftSelect.value;
-  const rightValue = rightSelect.value;
+  const [leftValue, rightValue] = initVars();
 
   if (leftValue === 'RUB') {
     input.value = (resultValue * rates[rightValue].Value).toFixed(2);
@@ -43,16 +47,24 @@ function calculateReverseResult() {
   }
 }
 
-input.addEventListener('input', calculateResult);
-result.addEventListener('input', calculateReverseResult);
-leftSelect.addEventListener('change', () => {
-  calculateResult();
-  changeFlagImage('flagImage1', 'leftSelect');
-});
-rightSelect.addEventListener('input', () => {
-  calculateResult();
-  changeFlagImage('flagImage2', 'rightSelect');
-});
+if (input) {
+  input.addEventListener('input', calculateResult);
+}
+if (result) {
+  result.addEventListener('input', calculateReverseResult);
+}
+if (leftSelect) {
+  leftSelect.addEventListener('change', () => {
+    calculateResult();
+    changeFlagImage('flagImage1', 'leftSelect');
+  });
+}
+if (rightSelect) {
+  rightSelect.addEventListener('input', () => {
+    calculateResult();
+    changeFlagImage('flagImage2', 'rightSelect');
+  });
+}
 
 window.onload = function () {
   changeFlagImage('flagImage1', 'leftSelect');
@@ -62,12 +74,40 @@ window.onload = function () {
 const label1 = document.getElementById('label1');
 const label2 = document.getElementById('label2');
 
-input.addEventListener('input', () => {
-  label1.style.display = input.value ? 'none' : 'block';
-  label2.style.display = input.value ? 'none' : 'block';
-});
+if (input) {
+  input.addEventListener('input', () => {
+    label1.style.display = input.value ? 'none' : 'block';
+    label2.style.display = input.value ? 'none' : 'block';
+  });
+}
 
-result.addEventListener('input', () => {
-  label1.style.display = input.value ? 'none' : 'block';
-  label2.style.display = input.value ? 'none' : 'block';
-});
+if (result) {
+  result.addEventListener('input', () => {
+    label1.style.display = input.value ? 'none' : 'block';
+    label2.style.display = input.value ? 'none' : 'block';
+  });
+}
+
+function getInfoInBlocks() {
+  const USDBlock = document.getElementById('USD-block');
+  const EURBlock = document.getElementById('EUR-block');
+
+  const currUSD = rates.USD.Value;
+  const currEUR = rates.EUR.Value;
+
+  const USDChange = document.getElementById('USD-change');
+  const EURChange = document.getElementById('EUR-change');
+
+  const changeUSD = (currUSD - rates.USD.Previous).toFixed(2);
+  const changeEUR = (currEUR - rates.EUR.Previous).toFixed(2);
+
+  USDChange.textContent = changeUSD > 0 ? '+ ' + changeUSD : changeUSD;
+  EURChange.textContent = changeEUR > 0 ? '+ ' + changeEUR : changeEUR;
+
+  USDBlock.textContent = currUSD.toFixed(2);
+  EURBlock.textContent = currEUR.toFixed(2);
+}
+
+setTimeout(() => {
+  getInfoInBlocks();
+}, 1000);

@@ -49,7 +49,7 @@
           </div>
 
           <div class="flags-and-select">
-            <img class="flags" id="flagImage1" src ="./images/flags/RUB.png" alt="flags-country">
+            <img class="flags" id="flagImage1" src ="images/flags/RUB.png" alt="flags-country">
             <select class="form-select" id="leftSelect" onchange="changeFlagImage('flagImage1', 'leftSelect')">
               <option selected class="icon" value="RUB" id="ru1" data-translate="russian_currency">Russian Ruble</option>
               <option class="icon" value="USD" id="usd1" data-translate="american_currency">US Dollar</option>
@@ -73,7 +73,7 @@
           </div>
 
           <div class="flags-and-select">
-            <img class="flags" src="./images/flags/USD.png" id="flagImage2" alt="flags-country">
+            <img class="flags" src="images/flags/USD.png" id="flagImage2" alt="flags-country">
             <select class="form-select" id="rightSelect" onchange="changeFlagImage('flagImage2', 'rightSelect')">
             <option selected class="icon" value="USD" data-translate="american_currency">US Dollar</option>
             <option class="icon" value="RUB" data-translate="russian_currency">Russian Ruble</option>
@@ -84,31 +84,56 @@
       </div>
   </div>
 
+
   <div class="chart-container"></div>
   <div class="graph_title">
     <h4 class="graph_text" >Graph of the change in the exchange rate of the dollar to the ruble</h4>
       <div id="chart"></div>
-  
-  
   <script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
   <script src="grapg.js"></script>
-</body>
-  
-  
 </div>
   
-<!-- здесь (может быть) будет блок для курса валют ЦБ РФ -->
 
+<div class="cours2">
+<div class="font_rate noselect" data-translate="rateday_title">Currency rate for today:</div>
+<table>
+  <thead>
+    <tr>
+      <th class="cours-text"></th>
+      <th class="cours-text" data-translate="th_rate1">Currency</th>
+      <th class="cours-text" data-translate="th_rate2">Course(rub)</th>
+      <th class="cours-text" data-translate="th_rate3">Intraday change</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img class="flags-in-courses" src="./images/flags/USD.png" id="flagImage2" alt="flags-country"></td>
+      <td>
+        <p data-translate="american_currency">US Dollar</p>
+      </td>
+      <td>
+        <p class="cours-text-in-column" id="USD-block">00.0</p>
+      </td>
+      <td>
+        <p class="cours-text-in-column" id="USD-change">- 0.00</p>
+      </td>
+    </tr>
+    <tr>
+      <td><img class="flags-in-courses" src="./images/flags/EUR.png" id="flagImage2" alt="flags-country"></td>
+      <td>
+        <p data-translate="europian_currency">Euro</p>
+      </td>
+      <td>
+        <p class="cours-text-in-column" id="EUR-block">00.0</p>
+      </td>
+      <td>
+        <p class="cours-text-in-column" id="EUR-change">- 0.00</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
-<!-- здесь (может быть) будет блок для курса валют ЦБ РФ -->
-
-<!-- здесь будет блок для графика -->
-
-
-<!--  здесь будет блок для графика -->
-
-
-<!--Нижний колонтитул-->
 <footer id="footer">
   <div class="foot_blck">
     <div class="foot_levo">
@@ -128,11 +153,11 @@
     </div>
   </div>
 </footer>
-<script type="module" src="/index.js"></script>
-<script src="/styles/adaptive.js"></script>
-<script type="module" src="/src/converter.js"></script>
-<script src="/src/devbuttons.js"></script>
-<script src="/styles/flagsAnim.js"></script>
+<script type="module" src="index.js"></script>
+<script src="./styles/adaptive.js"></script>
+<script type="module" src="./src/converter.js"></script>
+<script src="./src/devbuttons.js"></script>
+<script src="./styles/flagsAnim.js"></script>
 <script src="./styles/scroll.js"></script>
 <script src="./src/language.js  "></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>

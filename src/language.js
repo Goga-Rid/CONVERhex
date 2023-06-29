@@ -47,6 +47,22 @@ const translations = {
     "en" : "Contacts",
     "ru" : "Контакты",
   },
+  "rateday_title":{
+    "en" : "Currency rate for today:",
+    "ru" : "Курс валюты на сегодня:",
+  },
+  "th_rate1": {
+    "en" : "Currency",
+    "ru" : "Валюта",
+  },
+  "th_rate2": {
+    "en" : "Course(rub)",
+    "ru" : "Курс(руб)",
+  },
+  "th_rate3": {
+    "en" : "Intraday change",
+    "ru" : "Сегодняшнее изменение",
+  }
 };
 
 function translateText(language) {
@@ -54,9 +70,9 @@ function translateText(language) {
 
   elements.forEach((element) => {
     const key = element.getAttribute('data-translate');
-    const translation = translations[key][language];
+    const translation = translations[key]?.[language];
 
-    if (translation) {
+    if (translation !== undefined) {
       element.textContent = translation;
     }
   });
@@ -70,3 +86,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const language = 'en';
   translateText(language);
 });
+
+module.exports = {
+  translations,
+  translateText,
+  changeLanguage,
+};
