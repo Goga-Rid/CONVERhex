@@ -21,47 +21,49 @@ function initVars() { // fix code climate warning
   return [leftValue, rightValue];
 }
 
-function calculateResult() {
+function calculateCurr(isReverse = false) {
   const inputValue = parseFloat(input.value);
-  const [leftValue, rightValue] = initVars();
-
-  if (leftValue === 'RUB') {
-    result.value = (inputValue / rates[rightValue].Value).toFixed(2);
-  } else if (rightValue === 'RUB') {
-    result.value = (inputValue * rates[leftValue].Value).toFixed(2);
-  } else {
-    result.value = (inputValue * (rates[leftValue].Value / rates[rightValue].Value)).toFixed(2);
-  }
-}
-
-function calculateReverseResult() {
   const resultValue = parseFloat(result.value);
   const [leftValue, rightValue] = initVars();
-
-  if (leftValue === 'RUB') {
-    input.value = (resultValue * rates[rightValue].Value).toFixed(2);
-  } else if (rightValue === 'RUB') {
-    input.value = (resultValue / rates[leftValue].Value).toFixed(2);
-  } else {
-    input.value = (resultValue * (rates[rightValue].Value / rates[leftValue].Value)).toFixed(2);
+  if (isReverse) { // reverse
+    if (leftValue === 'RUB') {
+      input.value = (resultValue * rates[rightValue].Value).toFixed(2);
+    } else if (rightValue === 'RUB') {
+      input.value = (resultValue / rates[leftValue].Value).toFixed(2);
+    } else {
+      input.value = (resultValue * (rates[rightValue].Value / rates[leftValue].Value)).toFixed(2);
+    }
+  }
+  if (!isReverse) { // calc
+    if (leftValue === 'RUB') {
+      result.value = (inputValue / rates[rightValue].Value).toFixed(2);
+    } else if (rightValue === 'RUB') {
+      result.value = (inputValue * rates[leftValue].Value).toFixed(2);
+    } else {
+      result.value = (inputValue * (rates[leftValue].Value / rates[rightValue].Value)).toFixed(2);
+    }
   }
 }
 
 if (input) {
-  input.addEventListener('input', calculateResult);
+  input.addEventListener('input', () => {
+    calculateCurr();
+  });
 }
 if (result) {
-  result.addEventListener('input', calculateReverseResult);
+  result.addEventListener('input', () => {
+    calculateCurr(true);
+  });
 }
 if (leftSelect) {
   leftSelect.addEventListener('change', () => {
-    calculateResult();
+    calculateCurr();
     changeFlagImage('flagImage1', 'leftSelect');
   });
 }
 if (rightSelect) {
   rightSelect.addEventListener('input', () => {
-    calculateResult();
+    calculateCurr();
     changeFlagImage('flagImage2', 'rightSelect');
   });
 }
