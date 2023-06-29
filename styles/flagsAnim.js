@@ -1,5 +1,3 @@
-const leftSelect = document.getElementById('leftSelect');
-
 function changeFlagImage(flagId, selectId) {
   const select = document.getElementById(selectId);
   const flagImage = document.getElementById(flagId);
@@ -32,3 +30,5 @@ function changeFlagImage(flagId, selectId) {
     leftSelect.dispatchEvent(event);
   }
 }
+
+module.exports = { changeFlagImage };

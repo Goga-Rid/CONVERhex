@@ -4,12 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function fetchData() {
     return new Promise((resolve) => {
       setTimeout(() => {
-        const data = [
-          { date: "2023-06-01", rate: 72.50 },
-          { date: "2023-06-02", rate: 72.60 },
-          { date: "2023-06-03", rate: 72.70 },
-
-        ];
+        const data = createDataForGraph();
         resolve(data);
       }, 1000);
     });

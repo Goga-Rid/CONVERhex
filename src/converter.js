@@ -108,6 +108,20 @@ function getInfoInBlocks() {
   EURBlock.textContent = currEUR.toFixed(2);
 }
 
+function createDataForGraph() {
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.getDate().toString().padStart(2, '0');
+
+  const formattedDate = `${year}-${month}-${day}`;
+  const formattedDateYesterday = `${year}-${month}-${day - 1}`;
+  return [{ date: formattedDateYesterday, rate: rates.USD.Previous },
+    { date: formattedDate, rate: rates.USD.Value }];
+}
+
 setTimeout(() => {
   getInfoInBlocks();
 }, 1000);
+
+module.exports = { createDataForGraph };
