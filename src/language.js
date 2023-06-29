@@ -62,7 +62,7 @@ const translations = {
   "th_rate3": {
     "en" : "Intraday change",
     "ru" : "Сегодняшнее изменение",
-  },
+  }
 };
 
 function translateText(language) {

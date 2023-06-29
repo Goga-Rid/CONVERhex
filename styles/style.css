@@ -512,6 +512,40 @@ a:hover{
   margin-left: 15px;
 }
 
+#chart {
+  width: 100%;
+  height: calc(100% - 40px); /* Вычтем высоту заголовка и отступы внутри контейнера */
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+h4 {
+  font-family: 'JetBrains Mono';
+  font-size: 45px;
+  text-align: center;
+}
+#chart-container {
+  width: 100%;
+  height: 100vh;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.graph_title {
+  border: thick solid #246ef5;
+  border-radius: 40px;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 .font_rate{
   font-family: 'JetBrains Mono';
   font-size: 25px;
@@ -525,4 +559,5 @@ a:hover{
   text-transform: none;
   transition: all .4s;
   border-bottom: 2px #246ef5 solid;
+
 }
