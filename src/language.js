@@ -46,17 +46,17 @@ const translations = {
   "footer_button": {
     "en" : "Contacts",
     "ru" : "Контакты",
-  }
-}
+  },
+};
 
 function translateText(language) {
   const elements = document.querySelectorAll('[data-translate]');
-  
-  elements.forEach(element => {
+
+  elements.forEach((element) => {
     const key = element.getAttribute('data-translate');
-    const translation = translations[key][language];
-    
-    if (translation) {
+    const translation = translations[key]?.[language];
+
+    if (translation !== undefined) {
       element.textContent = translation;
     }
   });
@@ -70,3 +70,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const language = 'en';
   translateText(language);
 });
+
+module.exports = {
+  translations,
+  translateText,
+  changeLanguage,
+};

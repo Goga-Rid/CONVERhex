@@ -43,16 +43,24 @@ function calculateReverseResult() {
   }
 }
 
-input.addEventListener('input', calculateResult);
-result.addEventListener('input', calculateReverseResult);
-leftSelect.addEventListener('change', () => {
-  calculateResult();
-  changeFlagImage('flagImage1', 'leftSelect');
-});
-rightSelect.addEventListener('input', () => {
-  calculateResult();
-  changeFlagImage('flagImage2', 'rightSelect');
-});
+if (input) {
+  input.addEventListener('input', calculateResult);
+}
+if (result) {
+  result.addEventListener('input', calculateReverseResult);
+}
+if (leftSelect) {
+  leftSelect.addEventListener('change', () => {
+    calculateResult();
+    changeFlagImage('flagImage1', 'leftSelect');
+  });
+}
+if (rightSelect) {
+  rightSelect.addEventListener('input', () => {
+    calculateResult();
+    changeFlagImage('flagImage2', 'rightSelect');
+  });
+}
 
 window.onload = function () {
   changeFlagImage('flagImage1', 'leftSelect');
@@ -62,12 +70,16 @@ window.onload = function () {
 const label1 = document.getElementById('label1');
 const label2 = document.getElementById('label2');
 
-input.addEventListener('input', () => {
-  label1.style.display = input.value ? 'none' : 'block';
-  label2.style.display = input.value ? 'none' : 'block';
-});
+if (input) {
+  input.addEventListener('input', () => {
+    label1.style.display = input.value ? 'none' : 'block';
+    label2.style.display = input.value ? 'none' : 'block';
+  });
+}
 
-result.addEventListener('input', () => {
-  label1.style.display = input.value ? 'none' : 'block';
-  label2.style.display = input.value ? 'none' : 'block';
-});
+if (result) {
+  result.addEventListener('input', () => {
+    label1.style.display = input.value ? 'none' : 'block';
+    label2.style.display = input.value ? 'none' : 'block';
+  });
+}
