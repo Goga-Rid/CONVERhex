@@ -15,55 +15,53 @@ const result = document.getElementById('resultV');
 const leftSelect = document.getElementById('leftSelect');
 const rightSelect = document.getElementById('rightSelect');
 
-function initVars() { // fix code climate warning
+function initVars() {
   const leftValue = leftSelect.value;
   const rightValue = rightSelect.value;
   return [leftValue, rightValue];
 }
 
-function calculateCurr(isReverse = false) {
+function calculateResult() {
   const inputValue = parseFloat(input.value);
+  const [leftValue, rightValue] = initVars();
+
+  if (leftValue === 'RUB') {
+    result.value = (inputValue / rates[rightValue].Value).toFixed(2);
+  } else if (rightValue === 'RUB') {
+    result.value = (inputValue * rates[leftValue].Value).toFixed(2);
+  } else {
+    result.value = (inputValue * (rates[leftValue].Value / rates[rightValue].Value)).toFixed(2);
+  }
+}
+
+function calculateReverseResult() {
   const resultValue = parseFloat(result.value);
   const [leftValue, rightValue] = initVars();
-  if (isReverse) { // reverse
-    if (leftValue === 'RUB') {
-      input.value = (resultValue * rates[rightValue].Value).toFixed(2);
-    } else if (rightValue === 'RUB') {
-      input.value = (resultValue / rates[leftValue].Value).toFixed(2);
-    } else {
-      input.value = (resultValue * (rates[rightValue].Value / rates[leftValue].Value)).toFixed(2);
-    }
-  }
-  if (!isReverse) { // calc
-    if (leftValue === 'RUB') {
-      result.value = (inputValue / rates[rightValue].Value).toFixed(2);
-    } else if (rightValue === 'RUB') {
-      result.value = (inputValue * rates[leftValue].Value).toFixed(2);
-    } else {
-      result.value = (inputValue * (rates[leftValue].Value / rates[rightValue].Value)).toFixed(2);
-    }
+
+  if (leftValue === 'RUB') {
+    input.value = (resultValue * rates[rightValue].Value).toFixed(2);
+  } else if (rightValue === 'RUB') {
+    input.value = (resultValue / rates[leftValue].Value).toFixed(2);
+  } else {
+    input.value = (resultValue * (rates[rightValue].Value / rates[leftValue].Value)).toFixed(2);
   }
 }
 
 if (input) {
-  input.addEventListener('input', () => {
-    calculateCurr();
-  });
+  input.addEventListener('input', calculateResult);
 }
 if (result) {
-  result.addEventListener('input', () => {
-    calculateCurr(true);
-  });
+  result.addEventListener('input', calculateReverseResult);
 }
 if (leftSelect) {
   leftSelect.addEventListener('change', () => {
-    calculateCurr();
+    calculateResult();
     changeFlagImage('flagImage1', 'leftSelect');
   });
 }
 if (rightSelect) {
   rightSelect.addEventListener('input', () => {
-    calculateCurr();
+    calculateResult();
     changeFlagImage('flagImage2', 'rightSelect');
   });
 }
