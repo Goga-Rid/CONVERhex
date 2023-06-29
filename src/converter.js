@@ -31,15 +31,15 @@ function calculateResult() {
 
 function calculateReverseResult() {
   const resultValue = parseFloat(result.value);
-  const leftValue = leftSelect.value;
-  const rightValue = rightSelect.value;
+  const leftValueR = leftSelect.value;
+  const rightValueR = rightSelect.value;
 
-  if (leftValue === 'RUB') {
-    input.value = (resultValue * rates[rightValue].Value).toFixed(2);
-  } else if (rightValue === 'RUB') {
-    input.value = (resultValue / rates[leftValue].Value).toFixed(2);
+  if (leftValueR === 'RUB') {
+    input.value = (resultValue * rates[rightValueR].Value).toFixed(2);
+  } else if (rightValueR === 'RUB') {
+    input.value = (resultValue / rates[leftValueR].Value).toFixed(2);
   } else {
-    input.value = (resultValue * (rates[rightValue].Value / rates[leftValue].Value)).toFixed(2);
+    input.value = (resultValue * (rates[rightValueR].Value / rates[leftValueR].Value)).toFixed(2);
   }
 }
 
