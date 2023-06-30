@@ -27,26 +27,32 @@ function calculateResult() {
   const inputValue = parseFloat(input.value);
   const [leftValue, rightValue] = initVars();
 
+  let calculatedValue;
   if (leftValue === 'RUB') {
-    result.value = (inputValue / rates[rightValue].Value).toFixed(2);
+    calculatedValue = inputValue / rates[rightValue].Value;
   } else if (rightValue === 'RUB') {
-    result.value = (inputValue * rates[leftValue].Value).toFixed(2);
+    calculatedValue = inputValue * rates[leftValue].Value;
   } else {
-    result.value = (inputValue * (rates[leftValue].Value / rates[rightValue].Value)).toFixed(2);
+    calculatedValue = inputValue * (rates[leftValue].Value / rates[rightValue].Value);
   }
+
+  result.value = calculatedValue.toFixed(2);
 }
 
 function calculateReverseResult() {
   const resultValue = parseFloat(result.value);
   const [leftValue, rightValue] = initVars();
 
+  let calculatedValue;
   if (leftValue === 'RUB') {
-    input.value = (resultValue * rates[rightValue].Value).toFixed(2);
+    calculatedValue = resultValue * rates[rightValue].Value;
   } else if (rightValue === 'RUB') {
-    input.value = (resultValue / rates[leftValue].Value).toFixed(2);
+    calculatedValue = resultValue / rates[leftValue].Value;
   } else {
-    input.value = (resultValue * (rates[rightValue].Value / rates[leftValue].Value)).toFixed(2);
+    calculatedValue = resultValue * (rates[rightValue].Value / rates[leftValue].Value);
   }
+
+  input.value = calculatedValue.toFixed(2);
 }
 
 function toggleLabelsDisplay() {
