@@ -62,7 +62,15 @@ const translations = {
   "th_rate3": {
     "en" : "Intraday change",
     "ru" : "Сегодняшнее изменение",
-  }
+  },
+  "graph_usd": {
+    "en" : "Graph of the change in the exchange rate of the dollar to the ruble",
+    "ru" : "График изменения обменного курса доллара к рублю",
+  },
+  "graph_eur": {
+    "en" : "Graph of the change in the exchange rate of the euro to the ruble",
+    "ru" : "График изменения обменного курса евро к рублю",
+  },
 };
 
 function translateText(language) {

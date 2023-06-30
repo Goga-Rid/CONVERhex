@@ -108,7 +108,7 @@ function getInfoInBlocks() {
   EURBlock.textContent = currEUR.toFixed(2);
 }
 
-function createDataForGraph() {
+function createDataForGraphUSD() {
   const date = new Date();
   const year = date.getFullYear();
   const month = (date.getMonth() + 1).toString().padStart(2, '0');
@@ -124,4 +124,22 @@ setTimeout(() => {
   getInfoInBlocks();
 }, 1000);
 
-module.exports = { createDataForGraph };
+
+
+function createDataForGraphEUR() {
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.getDate().toString().padStart(2, '0');
+
+  const formattedDate = `${year}-${month}-${day}`;
+  const formattedDateYesterday = `${year}-${month}-${day - 1}`;
+  return [{ date: formattedDateYesterday, rate: rates.EUR.Previous },
+    { date: formattedDate, rate: rates.EUR.Value }];
+}
+
+setTimeout(() => {
+  getInfoInBlocks();
+}, 1000);
+
+module.exports = { createDataForGraphUSD, createDataForGraphEUR };
