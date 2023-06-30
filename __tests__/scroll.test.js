@@ -1,3 +1,4 @@
+global.TextEncoder = require('util').TextEncoder;
 const { JSDOM } = require('jsdom');
 const { handleScroll } = require('../styles/scroll');
 
