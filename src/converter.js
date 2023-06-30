@@ -14,6 +14,8 @@ const input = document.getElementById('inputV');
 const result = document.getElementById('resultV');
 const leftSelect = document.getElementById('leftSelect');
 const rightSelect = document.getElementById('rightSelect');
+const label1 = document.getElementById('label1');
+const label2 = document.getElementById('label2');
 
 function initVars() {
   const leftValue = leftSelect.value;
@@ -47,18 +49,36 @@ function calculateReverseResult() {
   }
 }
 
+function toggleLabelsDisplay() {
+  label1.style.display = input.value ? 'none' : 'block';
+  label2.style.display = input.value ? 'none' : 'block';
+}
+
+function handleInputChange() {
+  calculateResult();
+  toggleLabelsDisplay();
+}
+
+function handleResultChange() {
+  calculateReverseResult();
+  toggleLabelsDisplay();
+}
+
 if (input) {
-  input.addEventListener('input', calculateResult);
+  input.addEventListener('input', handleInputChange);
 }
+
 if (result) {
-  result.addEventListener('input', calculateReverseResult);
+  result.addEventListener('input', handleResultChange);
 }
+
 if (leftSelect) {
   leftSelect.addEventListener('change', () => {
     calculateResult();
     changeFlagImage('flagImage1', 'leftSelect');
   });
 }
+
 if (rightSelect) {
   rightSelect.addEventListener('input', () => {
     calculateResult();
@@ -71,21 +91,12 @@ window.onload = function () {
   changeFlagImage('flagImage2', 'rightSelect');
 };
 
-const label1 = document.getElementById('label1');
-const label2 = document.getElementById('label2');
-
 if (input) {
-  input.addEventListener('input', () => {
-    label1.style.display = input.value ? 'none' : 'block';
-    label2.style.display = input.value ? 'none' : 'block';
-  });
+  input.addEventListener('input', toggleLabelsDisplay);
 }
 
 if (result) {
-  result.addEventListener('input', () => {
-    label1.style.display = input.value ? 'none' : 'block';
-    label2.style.display = input.value ? 'none' : 'block';
-  });
+  result.addEventListener('input', toggleLabelsDisplay);
 }
 
 function getInfoInBlocks() {
@@ -108,25 +119,11 @@ function getInfoInBlocks() {
   EURBlock.textContent = currEUR.toFixed(2);
 }
 
-function createDataForGraphUSD() {
-  const date = new Date();
-  const year = date.getFullYear();
-  const month = (date.getMonth() + 1).toString().padStart(2, '0');
-  const day = date.getDate().toString().padStart(2, '0');
-
-  const formattedDate = `${year}-${month}-${day}`;
-  const formattedDateYesterday = `${year}-${month}-${day - 1}`;
-  return [{ date: formattedDateYesterday, rate: rates.USD.Previous },
-    { date: formattedDate, rate: rates.USD.Value }];
-}
-
 setTimeout(() => {
   getInfoInBlocks();
 }, 1000);
 
-
-
-function createDataForGraphEUR() {
+function createDataForGraph(chartName, rate) {
   const date = new Date();
   const year = date.getFullYear();
   const month = (date.getMonth() + 1).toString().padStart(2, '0');
@@ -134,8 +131,19 @@ function createDataForGraphEUR() {
 
   const formattedDate = `${year}-${month}-${day}`;
   const formattedDateYesterday = `${year}-${month}-${day - 1}`;
-  return [{ date: formattedDateYesterday, rate: rates.EUR.Previous },
-    { date: formattedDate, rate: rates.EUR.Value }];
+
+  return [
+    { date: formattedDateYesterday, rate: rate.Previous },
+    { date: formattedDate, rate: rate.Value }
+  ];
+}
+
+function createDataForGraphUSD() {
+  return createDataForGraph('USD', rates.USD);
+}
+
+function createDataForGraphEUR() {
+  return createDataForGraph('EUR', rates.EUR);
 }
 
 setTimeout(() => {
