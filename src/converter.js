@@ -72,25 +72,6 @@ if (result) {
   result.addEventListener('input', handleResultChange);
 }
 
-if (leftSelect) {
-  leftSelect.addEventListener('change', () => {
-    calculateResult();
-    changeFlagImage('flagImage1', 'leftSelect');
-  });
-}
-
-if (rightSelect) {
-  rightSelect.addEventListener('input', () => {
-    calculateResult();
-    changeFlagImage('flagImage2', 'rightSelect');
-  });
-}
-
-window.onload = function () {
-  changeFlagImage('flagImage1', 'leftSelect');
-  changeFlagImage('flagImage2', 'rightSelect');
-};
-
 if (input) {
   input.addEventListener('input', toggleLabelsDisplay);
 }
@@ -112,8 +93,8 @@ function getInfoInBlocks() {
   const changeUSD = (currUSD - rates.USD.Previous).toFixed(2);
   const changeEUR = (currEUR - rates.EUR.Previous).toFixed(2);
 
-  USDChange.textContent = changeUSD > 0 ? '+ ' + changeUSD : changeUSD;
-  EURChange.textContent = changeEUR > 0 ? '+ ' + changeEUR : changeEUR;
+  USDChange.textContent = changeUSD > 0 ? `+ ${changeUSD}` : changeUSD;
+  EURChange.textContent = changeEUR > 0 ? `+ ${changeEUR}` : changeEUR;
 
   USDBlock.textContent = currUSD.toFixed(2);
   EURBlock.textContent = currEUR.toFixed(2);
@@ -134,7 +115,7 @@ function createDataForGraph(chartName, rate) {
 
   return [
     { date: formattedDateYesterday, rate: rate.Previous },
-    { date: formattedDate, rate: rate.Value }
+    { date: formattedDate, rate: rate.Value },
   ];
 }
 

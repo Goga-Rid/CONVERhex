@@ -9,7 +9,7 @@ function changeFlagImage(flagId, selectId) {
     EUR: './images/flags/EUR.png',
   };
 
-  if (flagMappings.hasOwnProperty(selectedValue)) {
+  if (Object.prototype.hasOwnProperty.call(flagMappings, selectedValue)) {
     flagImage.src = flagMappings[selectedValue];
   }
 
@@ -19,8 +19,7 @@ function changeFlagImage(flagId, selectId) {
 
   if (selectedValue === otherSelectedValue) {
     alert('Выбрана одинаковая валюта в обоих полях | Selected the same currency in both fields');
-    const options = select.options;
-    const selectedIndex = select.selectedIndex;
+    const { options, selectedIndex } = select;
     const nextIndex = (selectedIndex + 1) % options.length;
     select.selectedIndex = nextIndex;
     changeFlagImage(flagId, selectId);
