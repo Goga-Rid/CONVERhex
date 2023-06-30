@@ -1,6 +1,3 @@
-// const { ApexCharts } = require('chart.js');
-// const { createDataForGraphUSD, createDataForGraphEUR } = require('./converter');
-
 function createChart(id, createDataFunction) {
   function fetchData() {
     return new Promise((resolve) => {
