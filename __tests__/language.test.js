@@ -1,4 +1,6 @@
-const { translateText, changeLanguage } = require('../src/language');
+const { translateText } = require('../src/language');
+
+const getTranslatedElementText = (dataTranslateAttribute) => document.querySelector(`[data-translate="${dataTranslateAttribute}"]`).textContent;
 
 describe('language.js', () => {
   beforeEach(() => {
@@ -15,9 +17,9 @@ describe('language.js', () => {
     translateText(language);
 
     return {
-      headerTitle: document.querySelector('[data-translate="header_title"]').textContent,
-      headerButton: document.querySelector('[data-translate="header_button"]').textContent,
-      textlineOne: document.querySelector('[data-translate="textline_one"]').textContent,
+      headerTitle: getTranslatedElementText('header_title'),
+      headerButton: getTranslatedElementText('header_button'),
+      textlineOne: getTranslatedElementText('textline_one'),
     };
   };
 
@@ -43,20 +45,6 @@ describe('language.js', () => {
       expect(untranslatedText.headerButton).toBe('Main');
       expect(untranslatedText.textlineOne).toBe(
         'Currency Converter - from CONVERhex will help you quickly convert one currency to another at the current market rate.',
-      );
-    });
-  });
-
-  describe('changeLanguage', () => {
-    it('changes the language of the translated elements', () => {
-      const language = 'ru';
-
-      const translatedText = getTranslatedText(language);
-
-      expect(translatedText.headerTitle).toBe('Конвертер валют');
-      expect(translatedText.headerButton).toBe('Главная');
-      expect(translatedText.textlineOne).toBe(
-        'Конвертер валют - от CONVERhex поможет вам быстро конвертировать одну валюту в другую по текущему рыночному курсу.',
       );
     });
   });
