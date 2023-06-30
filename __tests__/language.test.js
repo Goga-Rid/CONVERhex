@@ -11,19 +11,25 @@ describe('language.js', () => {
     `;
   });
 
+  const getTranslatedText = (language) => {
+    translateText(language);
+
+    return {
+      headerTitle: document.querySelector('[data-translate="header_title"]').textContent,
+      headerButton: document.querySelector('[data-translate="header_button"]').textContent,
+      textlineOne: document.querySelector('[data-translate="textline_one"]').textContent,
+    };
+  };
+
   describe('translateText', () => {
     it('translates elements to the specified language', () => {
       const language = 'ru';
 
-      translateText(language);
+      const translatedText = getTranslatedText(language);
 
-      const translatedHeaderTitle = document.querySelector('[data-translate="header_title"]').textContent;
-      const translatedHeaderButton = document.querySelector('[data-translate="header_button"]').textContent;
-      const translatedTextlineOne = document.querySelector('[data-translate="textline_one"]').textContent;
-
-      expect(translatedHeaderTitle).toBe('Конвертер валют');
-      expect(translatedHeaderButton).toBe('Главная');
-      expect(translatedTextlineOne).toBe(
+      expect(translatedText.headerTitle).toBe('Конвертер валют');
+      expect(translatedText.headerButton).toBe('Главная');
+      expect(translatedText.textlineOne).toBe(
         'Конвертер валют - от CONVERhex поможет вам быстро конвертировать одну валюту в другую по текущему рыночному курсу.',
       );
     });
@@ -31,15 +37,11 @@ describe('language.js', () => {
     it('does not translate elements without translation for the specified language', () => {
       const language = 'es';
 
-      translateText(language);
+      const untranslatedText = getTranslatedText(language);
 
-      const untranslatedHeaderTitle = document.querySelector('[data-translate="header_title"]').textContent;
-      const untranslatedHeaderButton = document.querySelector('[data-translate="header_button"]').textContent;
-      const untranslatedTextlineOne = document.querySelector('[data-translate="textline_one"]').textContent;
-
-      expect(untranslatedHeaderTitle).toBe('Currency converter');
-      expect(untranslatedHeaderButton).toBe('Main');
-      expect(untranslatedTextlineOne).toBe(
+      expect(untranslatedText.headerTitle).toBe('Currency converter');
+      expect(untranslatedText.headerButton).toBe('Main');
+      expect(untranslatedText.textlineOne).toBe(
         'Currency Converter - from CONVERhex will help you quickly convert one currency to another at the current market rate.',
       );
     });
@@ -49,15 +51,11 @@ describe('language.js', () => {
     it('changes the language of the translated elements', () => {
       const language = 'ru';
 
-      changeLanguage(language);
+      const translatedText = getTranslatedText(language);
 
-      const translatedHeaderTitle = document.querySelector('[data-translate="header_title"]').textContent;
-      const translatedHeaderButton = document.querySelector('[data-translate="header_button"]').textContent;
-      const translatedTextlineOne = document.querySelector('[data-translate="textline_one"]').textContent;
-
-      expect(translatedHeaderTitle).toBe('Конвертер валют');
-      expect(translatedHeaderButton).toBe('Главная');
-      expect(translatedTextlineOne).toBe(
+      expect(translatedText.headerTitle).toBe('Конвертер валют');
+      expect(translatedText.headerButton).toBe('Главная');
+      expect(translatedText.textlineOne).toBe(
         'Конвертер валют - от CONVERhex поможет вам быстро конвертировать одну валюту в другую по текущему рыночному курсу.',
       );
     });
