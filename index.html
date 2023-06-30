@@ -85,54 +85,62 @@
   </div>
 
 
-  <div class="chart-container"></div>
-  <div class="graph_title">
-    <h4 class="graph_text" >Graph of the change in the exchange rate of the dollar to the ruble</h4>
-      <div id="chart"></div>
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
-  <script src="./src/graph.js"></script>
-</div>
+  
+<div class="cours2">
+  <div class="font_rate noselect" data-translate="rateday_title">Currency rate for today:</div>
+  <table>
+    <thead>
+      <tr>
+        <th class="cours-text"></th>
+        <th class="cours-text" data-translate="th_rate1">Currency</th>
+        <th class="cours-text" data-translate="th_rate2">Course(rub)</th>
+        <th class="cours-text" data-translate="th_rate3">Intraday change</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img class="flags-in-courses" src="./images/flags/USD.png" id="flagImage2" alt="flags-country"></td>
+        <td>
+          <p data-translate="american_currency">US Dollar</p>
+        </td>
+        <td>
+          <p class="cours-text-in-column" id="USD-block">00.0</p>
+        </td>
+        <td>
+          <p class="cours-text-in-column" id="USD-change">- 0.00</p>
+        </td>
+      </tr>
+      <tr>
+        <td><img class="flags-in-courses" src="./images/flags/EUR.png" id="flagImage2" alt="flags-country"></td>
+        <td>
+          <p data-translate="europian_currency">Euro</p>
+        </td>
+        <td>
+          <p class="cours-text-in-column" id="EUR-block">00.0</p>
+        </td>
+        <td>
+          <p class="cours-text-in-column" id="EUR-change">- 0.00</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
   
 
-<div class="cours2">
-<div class="font_rate noselect" data-translate="rateday_title">Currency rate for today:</div>
-<table>
-  <thead>
-    <tr>
-      <th class="cours-text"></th>
-      <th class="cours-text" data-translate="th_rate1">Currency</th>
-      <th class="cours-text" data-translate="th_rate2">Course(rub)</th>
-      <th class="cours-text" data-translate="th_rate3">Intraday change</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><img class="flags-in-courses" src="./images/flags/USD.png" id="flagImage2" alt="flags-country"></td>
-      <td>
-        <p data-translate="american_currency">US Dollar</p>
-      </td>
-      <td>
-        <p class="cours-text-in-column" id="USD-block">00.0</p>
-      </td>
-      <td>
-        <p class="cours-text-in-column" id="USD-change">- 0.00</p>
-      </td>
-    </tr>
-    <tr>
-      <td><img class="flags-in-courses" src="./images/flags/EUR.png" id="flagImage2" alt="flags-country"></td>
-      <td>
-        <p data-translate="europian_currency">Euro</p>
-      </td>
-      <td>
-        <p class="cours-text-in-column" id="EUR-block">00.0</p>
-      </td>
-      <td>
-        <p class="cours-text-in-column" id="EUR-change">- 0.00</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <div class="chart-container_usd"></div>
+  <div class="graph_title">
+    <h4 class="graph_text" data-translate="graph_usd" >Graph of the change in the exchange rate of the dollar to the ruble</h4>
+      <div id="chart_usd"></div>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
 </div>
+
+<div class="chart-container_eur"></div>
+<div class="graph_title">
+  <h4 class="graph_text" data-translate="graph_eur">Graph of the change in the exchange rate of the euro to the ruble</h4>
+    <div id="chart_eur"></div>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
+</div>
+
 
 <footer id="footer">
   <div class="foot_blck">
@@ -161,7 +169,7 @@
 <script src="./styles/scroll.js"></script>
 <script src="./src/language.js  "></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
-<script src="/src/graph.js"></script>
+<script src="./src/graph.js"></script>
 <script>
   const btn = document.querySelector('.btn');
   const strelka = document.querySelector('.strelochka')
@@ -175,5 +183,12 @@ btn.addEventListener('mousemove', function(e) {
 });
 </script>
 <script src="styles/hideInfoCurrecy.js"></script>
+<script>
+  window.onload = function() {
+    const element = document.querySelector('.textline');
+    element.focus();
+    element.scrollIntoView();
+  };
+</script>
 </body>
 </html>
