@@ -70,6 +70,10 @@ function handleResultChange() {
   toggleLabelsDisplay();
 }
 
+function handleSelectChange() {
+  calculateResult();
+}
+
 if (input) {
   input.addEventListener('input', handleInputChange);
 }
@@ -84,6 +88,14 @@ if (input) {
 
 if (result) {
   result.addEventListener('input', toggleLabelsDisplay);
+}
+
+if (leftSelect) {
+  leftSelect.addEventListener('change', handleSelectChange);
+}
+
+if (rightSelect) {
+  rightSelect.addEventListener('change', handleSelectChange);
 }
 
 function getInfoInBlocks() {
