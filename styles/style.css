@@ -579,3 +579,187 @@ h4 {
   font-size: 30px;
 }
 
+
+@media only screen and (max-width: 600px) {
+  .header {
+    font-size: 20px;
+  }
+  
+  .textline {
+    font-size: 18px;
+  }
+  
+  .cssFont_1 {
+    font-size: 30px;
+  }
+
+  .mainmenu{
+    width: 100px;
+    height: 40px;
+    font-size: 10px;
+    padding: 5px 19px;
+  }
+  
+  .valute-card-all {
+    height: auto;
+    width: 100%;
+    margin: 10px;
+  }
+  
+  .flags-in-courses {
+    margin-left: 60%;
+    margin-top: -14%;
+    width: 30%;
+    height: 30%;
+  }
+  
+  .form-control, .form-select {
+    width: 80%;
+  }
+  
+  .description {
+    max-height: 200px;
+  }
+  
+  .graph_title {
+    height: auto;
+  }
+  
+  .chart-container_usd, .chart-container_eur {
+    height: 150px;
+  }
+  
+  .graph_text {
+    font-size: 20px;
+  }
+
+  .calc_title{
+    width: 100%;
+  }
+
+
+  .text_card{
+    font-size: 40px;
+  }
+
+  .logo{
+   width: 100px;
+}
+
+
+.translate_buttons{
+  display: flex;
+  flex-direction: column;
+}
+
+  .switch_ru{
+    width: 40px;
+    height: 40px;
+  }
+
+  .en_flag{
+    width: 30px;
+    height: 30px;
+  }
+
+  .switch_en{
+    width: 40px;
+    height: 40px;
+  }
+
+  .ru_flag{
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Применить стили для экранов с шириной до 480 пикселей */
+  .header {
+    font-size: 30px;
+  }
+
+  .textline {
+    font-size: 20px;
+  }
+
+  .text_card{
+    font-size: 30px;
+  }
+
+  .logo{
+    width: 30%;
+ }
+
+  .cssFont_1 {
+    font-size: 90%;
+  }
+
+  .mainmenu{
+    width: 79px;
+    height: 27px;
+    font-size: 10px;
+    padding: 5px 19px;
+  }
+
+  .valute-card-all {
+    height: 250px;
+    width: 90%;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .flags-in-courses {
+    margin-left: 60%;
+    margin-top: -14%;
+    width: 30%;
+    height: 30%;
+  }
+
+  .cours-text {
+    font-size: 12px;
+  }
+
+  .cours2 {
+    margin-bottom: 40px;
+  }
+
+  .graph_title {
+    margin-bottom: 10px;
+  }
+
+  .font_rate {
+    font-size: 20px;
+  }
+
+  .graph_text {
+    font-size: 24px;
+  }
+
+.translate_buttons{
+  display: flex;
+  flex-direction: column;
+}
+
+  .switch_ru{
+    width: 40px;
+    height: 40px;
+  }
+
+  .en_flag{
+    width: 30px;
+    height: 30px;
+  }
+
+  .switch_en{
+    width: 40px;
+    height: 40px;
+  }
+
+  .ru_flag{
+    width: 30px;
+    height: 30px;
+  }
+}
